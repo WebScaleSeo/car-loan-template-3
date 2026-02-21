@@ -1,0 +1,254 @@
+/* ─── Section Shell ─────────────────────────────────────────────── */
+.glf-section {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 1.5rem;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(14, 124, 70, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 70% at 90% 80%, rgba(26, 82, 118, 0.30) 0%, transparent 55%),
+    radial-gradient(ellipse 100% 80% at 50% 50%, rgba(12, 45, 94, 0.95) 0%, transparent 100%),
+    linear-gradient(135deg, #071628 0%, var(--primary-color) 45%, #0d3a6e 75%, #071628 100%);
+  animation: glf-enter 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes glf-enter {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Aurora Orbs ───────────────────────────────────────────────── */
+.glf-aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glf-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  animation: glf-pulse 8s ease-in-out infinite alternate;
+}
+
+.glf-orb-1 {
+  width: 500px;
+  height: 500px;
+  top: -120px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(14, 124, 70, 0.6) 0%, transparent 70%);
+  animation-delay: 0s;
+}
+
+.glf-orb-2 {
+  width: 600px;
+  height: 400px;
+  top: 30%;
+  right: -150px;
+  background: radial-gradient(circle, rgba(26, 82, 118, 0.7) 0%, transparent 70%);
+  animation-delay: -3s;
+}
+
+.glf-orb-3 {
+  width: 400px;
+  height: 400px;
+  bottom: -80px;
+  left: 35%;
+  background: radial-gradient(circle, rgba(12, 45, 94, 0.8) 0%, transparent 70%);
+  animation-delay: -6s;
+}
+
+@keyframes glf-pulse {
+  from { transform: scale(1) translate(0, 0); }
+  to   { transform: scale(1.12) translate(20px, -15px); }
+}
+
+/* ─── Container ─────────────────────────────────────────────────── */
+.glf-container {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ─── Header ────────────────────────────────────────────────────── */
+.glf-header {
+  margin-bottom: 3.5rem;
+}
+
+.glf-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body, inherit);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-inverse);
+  opacity: 0.55;
+  margin-bottom: 1rem;
+}
+
+.glf-title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-inverse);
+  margin: 0 0 1.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.glf-title-line {
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent-color), rgba(14, 124, 70, 0.3));
+}
+
+/* ─── Accordion ─────────────────────────────────────────────────── */
+.glf-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.glf-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  transition: background 0.25s ease;
+}
+
+.glf-item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.glf-item--open {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 4px;
+}
+
+/* ─── Question Button ───────────────────────────────────────────── */
+.glf-question {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: opacity 0.2s ease;
+}
+
+.glf-question:hover {
+  opacity: 0.85;
+}
+
+.glf-question:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Oversized Numeral ─────────────────────────────────────────── */
+.glf-num {
+  flex-shrink: 0;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--text-inverse);
+  opacity: 0.12;
+  letter-spacing: -0.05em;
+  width: 3.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  transition: opacity 0.25s ease;
+  font-family: var(--font-heading, inherit);
+}
+
+.glf-item--open .glf-num {
+  opacity: 0.45;
+  color: var(--accent-color);
+}
+
+/* ─── Question Text ─────────────────────────────────────────────── */
+.glf-question-text {
+  flex: 1;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-inverse);
+  line-height: 1.45;
+}
+
+/* ─── Chevron Icon ──────────────────────────────────────────────── */
+.glf-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-inverse);
+  transition: background 0.2s ease;
+}
+
+.glf-item--open .glf-icon {
+  background: rgba(14, 124, 70, 0.35);
+}
+
+.glf-chevron {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.glf-chevron--open {
+  transform: rotate(180deg);
+}
+
+/* ─── Answer ────────────────────────────────────────────────────── */
+.glf-answer {
+  padding: 0 1rem 1.75rem calc(3.5rem + 1.25rem + 1rem);
+}
+
+.glf-answer-text {
+  font-size: 0.975rem;
+  line-height: 1.75;
+  color: var(--text-inverse);
+  opacity: 0.82;
+  margin: 0;
+}
+
+/* ─── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .glf-section {
+    padding: 4rem 1rem;
+  }
+
+  .glf-title {
+    font-size: 1.85rem;
+  }
+
+  .glf-num {
+    font-size: 1.75rem;
+    width: 2.5rem;
+    opacity: 0.15;
+  }
+
+  .glf-question {
+    gap: 0.875rem;
+    padding: 1.25rem 0.5rem;
+  }
+
+  .glf-question-text {
+    font-size: 0.95rem;
+  }
+
+  .glf-answer {
+    padding: 0 0.5rem 1.5rem calc(2.5rem + 0.875rem + 0.5rem);
+  }
+
+  .glf-answer-text {
+    font-size: 0.9rem;
+  }
+}

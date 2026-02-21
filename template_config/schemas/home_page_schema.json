@@ -1,0 +1,293 @@
+{
+  "name": "generate_home_page",
+  "description": "Generate complete home page content",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "seo": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 60
+          },
+          "metaDescription": {
+            "type": "string",
+            "minLength": 50,
+            "maxLength": 160
+          }
+        },
+        "required": [
+          "title",
+          "metaDescription"
+        ]
+      },
+      "componentOrder": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "heroSection",
+            "loanTypesOverview",
+            "howItWorksSteps",
+            "whyChooseUs",
+            "customerTestimonials",
+            "readyToApplyCta"
+          ]
+        },
+        "minItems": 6,
+        "maxItems": 6
+      },
+      "sections": {
+        "type": "object",
+        "properties": {
+          "heroSection": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Bold primary headline (8-14 words) about getting a better car loan"
+              },
+              "subheadline": {
+                "type": "string",
+                "description": "Supporting sentence (15-25 words) expanding on the promise"
+              },
+              "ctaButtonLabel": {
+                "type": "string",
+                "description": "CTA button text, e.g. 'Get Started Today'"
+              },
+              "ctaButtonUrl": {
+                "type": "string",
+                "description": "Must be /contact"
+              },
+              "secondaryCtaLabel": {
+                "type": "string",
+                "description": "Secondary link text, e.g. 'Learn More'"
+              },
+              "secondaryCtaUrl": {
+                "type": "string",
+                "description": "Must be /about"
+              }
+            },
+            "required": [
+              "headline",
+              "subheadline",
+              "ctaButtonLabel",
+              "ctaButtonUrl",
+              "secondaryCtaLabel",
+              "secondaryCtaUrl"
+            ]
+          },
+          "loanTypesOverview": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Section heading, e.g. 'Financing Options for Every Driver'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief intro sentence about the range of loan products"
+              },
+              "loanTypes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "iconName": {
+                      "type": "string",
+                      "description": "Icon identifier, e.g. 'newCar', 'usedCar', 'refinance'"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Loan type name, e.g. 'New Car Loans'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentences about this loan type and its benefits"
+                    }
+                  },
+                  "required": [
+                    "iconName",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "loanTypes"
+            ]
+          },
+          "howItWorksSteps": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'How It Works'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief intro about the simple process"
+              },
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "stepNumber": {
+                      "type": "string",
+                      "description": "e.g. '1', '2', '3'"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Step title, e.g. 'Share Your Details'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "1-2 sentence explanation of this step"
+                    }
+                  },
+                  "required": [
+                    "stepNumber",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "steps"
+            ]
+          },
+          "whyChooseUs": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Why DriveRate?'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief overview sentence"
+              },
+              "benefits": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "iconName": {
+                      "type": "string",
+                      "description": "Icon identifier, e.g. 'shield', 'clock', 'dollar'"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Benefit name, e.g. 'Transparent Terms'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentences elaborating on this benefit"
+                    }
+                  },
+                  "required": [
+                    "iconName",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "benefits"
+            ]
+          },
+          "customerTestimonials": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'What Our Customers Say'"
+              },
+              "testimonials": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "quote": {
+                      "type": "string",
+                      "description": "Customer testimonial quote, 2-4 sentences"
+                    },
+                    "customerName": {
+                      "type": "string",
+                      "description": "First name + last initial, e.g. 'Sarah M.'"
+                    },
+                    "context": {
+                      "type": "string",
+                      "description": "Brief context, e.g. 'New Car Buyer' or 'Refinanced Auto Loan'"
+                    }
+                  },
+                  "required": [
+                    "quote",
+                    "customerName",
+                    "context"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "testimonials"
+            ]
+          },
+          "readyToApplyCta": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Motivating CTA heading, e.g. 'Ready to Hit the Road?'"
+              },
+              "description": {
+                "type": "string",
+                "description": "1-2 sentences encouraging action"
+              },
+              "ctaButtonLabel": {
+                "type": "string",
+                "description": "Button text, e.g. 'Contact Us Now'"
+              },
+              "ctaButtonUrl": {
+                "type": "string",
+                "description": "Must be /contact"
+              }
+            },
+            "required": [
+              "headline",
+              "description",
+              "ctaButtonLabel",
+              "ctaButtonUrl"
+            ]
+          }
+        },
+        "required": [
+          "heroSection",
+          "loanTypesOverview",
+          "howItWorksSteps",
+          "whyChooseUs",
+          "customerTestimonials",
+          "readyToApplyCta"
+        ]
+      }
+    },
+    "required": [
+      "seo",
+      "componentOrder",
+      "sections"
+    ]
+  }
+}

@@ -1,0 +1,317 @@
+/* ============================================
+   CreditAndEligibilityFaq — Light + Gradient
+   ============================================ */
+
+@keyframes ceq-gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes ceq-orb-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-24px) scale(1.06); }
+}
+
+@keyframes ceq-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Section shell ── */
+.ceq-section {
+  position: relative;
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+  background: var(--bg-page);
+}
+
+/* ── Animated multi-stop gradient backdrop ── */
+.ceq-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--bg-page) 0%,
+    var(--bg-surface) 25%,
+    color-mix(in srgb, var(--secondary-color) 6%, var(--bg-surface)) 50%,
+    color-mix(in srgb, var(--accent-color) 5%, var(--bg-surface)) 75%,
+    var(--bg-page) 100%
+  );
+  background-size: 300% 300%;
+  animation: ceq-gradient-shift 12s ease infinite;
+  z-index: 0;
+}
+
+/* ── Decorative radial glow orbs ── */
+.ceq-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ceq-bg-orb--1 {
+  width: 520px;
+  height: 520px;
+  top: -120px;
+  right: -100px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--primary-color) 18%, transparent) 0%, transparent 70%);
+  animation: ceq-orb-float 9s ease-in-out infinite;
+}
+
+.ceq-bg-orb--2 {
+  width: 400px;
+  height: 400px;
+  bottom: -80px;
+  left: -80px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent-color) 14%, transparent) 0%, transparent 70%);
+  animation: ceq-orb-float 11s ease-in-out infinite reverse;
+}
+
+/* ── Content container ── */
+.ceq-container {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+  animation: ceq-fade-up 0.6s ease both;
+}
+
+/* ── Header block ── */
+.ceq-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.ceq-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  background: color-mix(in srgb, var(--primary-color) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 12%, transparent);
+  border-radius: 99px;
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.ceq-eyebrow-icon {
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+}
+
+.ceq-title {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.ceq-subtitle {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── FAQ list ── */
+.ceq-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ── FAQ card item ── */
+.ceq-faq-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 1px 4px color-mix(in srgb, var(--primary-color) 5%, transparent);
+}
+
+.ceq-faq-item:hover {
+  border-color: color-mix(in srgb, var(--primary-color) 22%, transparent);
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--primary-color) 9%, transparent);
+}
+
+.ceq-faq-item--open {
+  border-color: color-mix(in srgb, var(--primary-color) 28%, transparent);
+  box-shadow: 0 6px 28px color-mix(in srgb, var(--primary-color) 12%, transparent);
+}
+
+/* ── Question button ── */
+.ceq-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-primary);
+  transition: background 0.18s ease;
+}
+
+.ceq-faq-question:hover {
+  background: color-mix(in srgb, var(--primary-color) 3%, transparent);
+}
+
+.ceq-faq-item--open .ceq-faq-question {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--primary-color) 5%, transparent) 0%,
+    color-mix(in srgb, var(--secondary-color) 4%, transparent) 100%
+  );
+}
+
+/* ── Question number badge ── */
+.ceq-faq-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-inverse);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.22s ease;
+}
+
+.ceq-faq-item--open .ceq-faq-number {
+  transform: scale(1.05);
+}
+
+/* ── Question text ── */
+.ceq-faq-question-text {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text-primary);
+}
+
+/* ── Chevron icon ── */
+.ceq-faq-chevron {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s ease;
+}
+
+.ceq-faq-item--open .ceq-faq-chevron {
+  transform: rotate(180deg);
+  color: var(--primary-color);
+}
+
+/* ── Answer panel ── */
+.ceq-faq-answer {
+  border-top: 1px solid var(--border-color);
+}
+
+.ceq-faq-answer-inner {
+  padding: 1.25rem 1.5rem 1.5rem;
+  padding-left: calc(1.5rem + 36px + 1rem); /* align with text after number */
+}
+
+.ceq-faq-answer-inner p {
+  font-size: 0.9625rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Footer trust note ── */
+.ceq-footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 3rem;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--primary-color) 5%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 10%, transparent);
+}
+
+.ceq-footer-icon {
+  flex-shrink: 0;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+}
+
+.ceq-footer-note span {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ============================================
+   Responsive — Mobile (≤ 640px)
+   ============================================ */
+@media (max-width: 640px) {
+  .ceq-section {
+    padding: 4rem 1rem;
+  }
+
+  .ceq-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .ceq-faq-question {
+    padding: 1rem 1.1rem;
+    gap: 0.75rem;
+  }
+
+  .ceq-faq-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    font-size: 0.68rem;
+  }
+
+  .ceq-faq-question-text {
+    font-size: 0.9375rem;
+  }
+
+  .ceq-faq-answer-inner {
+    padding: 1rem 1.1rem 1.25rem;
+    padding-left: calc(1.1rem + 30px + 0.75rem);
+  }
+
+  .ceq-footer-note {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ceq-bg-orb--1 {
+    width: 280px;
+    height: 280px;
+  }
+
+  .ceq-bg-orb--2 {
+    width: 220px;
+    height: 220px;
+  }
+}

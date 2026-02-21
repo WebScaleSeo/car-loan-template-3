@@ -1,0 +1,248 @@
+{
+  "name": "generate_contact_page",
+  "description": "Generate complete contact page content",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "seo": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 60
+          },
+          "metaDescription": {
+            "type": "string",
+            "minLength": 50,
+            "maxLength": 160
+          }
+        },
+        "required": [
+          "title",
+          "metaDescription"
+        ]
+      },
+      "componentOrder": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "contactHero",
+            "contactForm",
+            "whatToExpect",
+            "contactFaqPreview",
+            "contactClosingCta"
+          ]
+        },
+        "minItems": 5,
+        "maxItems": 5
+      },
+      "sections": {
+        "type": "object",
+        "properties": {
+          "contactHero": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Contact page heading, e.g. 'Let's Talk About Your Car Loan'"
+              },
+              "subheadline": {
+                "type": "string",
+                "description": "1-2 sentences about getting in touch and what to expect"
+              }
+            },
+            "required": [
+              "headline",
+              "subheadline"
+            ]
+          },
+          "contactForm": {
+            "type": "object",
+            "properties": {
+              "formTitle": {
+                "type": "string",
+                "description": "Form heading, e.g. 'Send Us a Message'"
+              },
+              "formDescription": {
+                "type": "string",
+                "description": "Brief instruction text above the form"
+              },
+              "fields": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "fieldName": {
+                      "type": "string",
+                      "description": "Field identifier, e.g. 'fullName', 'email', 'phone', 'message'"
+                    },
+                    "label": {
+                      "type": "string",
+                      "description": "Field label displayed to user"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Input type: text, email, tel, textarea"
+                    },
+                    "placeholder": {
+                      "type": "string",
+                      "description": "Placeholder text"
+                    },
+                    "required": {
+                      "type": "boolean",
+                      "description": "Whether field is required"
+                    }
+                  },
+                  "required": [
+                    "fieldName",
+                    "label",
+                    "type",
+                    "placeholder",
+                    "required"
+                  ]
+                }
+              },
+              "submitButtonLabel": {
+                "type": "string",
+                "description": "Submit button text, e.g. 'Send Message'"
+              }
+            },
+            "required": [
+              "formTitle",
+              "formDescription",
+              "fields",
+              "submitButtonLabel"
+            ]
+          },
+          "whatToExpect": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'What Happens Next?'"
+              },
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "stepNumber": {
+                      "type": "string",
+                      "description": "Step number"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Step title"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "1-2 sentence explanation"
+                    }
+                  },
+                  "required": [
+                    "stepNumber",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "steps"
+            ]
+          },
+          "contactFaqPreview": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Quick Answers'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief intro, e.g. 'Before you write, check if your question is answered here'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "Common question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Brief answer, 1-3 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              },
+              "faqLinkLabel": {
+                "type": "string",
+                "description": "Link text to full FAQ, e.g. 'View All FAQ'"
+              },
+              "faqLinkUrl": {
+                "type": "string",
+                "description": "Must be /faq"
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "questions",
+              "faqLinkLabel",
+              "faqLinkUrl"
+            ]
+          },
+          "contactClosingCta": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Closing line, e.g. 'We're Here to Help You Drive Away Happy'"
+              },
+              "description": {
+                "type": "string",
+                "description": "1-2 supportive sentences"
+              },
+              "secondaryLinkLabel": {
+                "type": "string",
+                "description": "Link text, e.g. 'Back to Home'"
+              },
+              "secondaryLinkUrl": {
+                "type": "string",
+                "description": "Must be /"
+              }
+            },
+            "required": [
+              "headline",
+              "description",
+              "secondaryLinkLabel",
+              "secondaryLinkUrl"
+            ]
+          }
+        },
+        "required": [
+          "contactHero",
+          "contactForm",
+          "whatToExpect",
+          "contactFaqPreview",
+          "contactClosingCta"
+        ]
+      }
+    },
+    "required": [
+      "seo",
+      "componentOrder",
+      "sections"
+    ]
+  }
+}

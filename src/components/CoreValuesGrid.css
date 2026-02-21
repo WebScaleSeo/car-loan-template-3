@@ -1,0 +1,195 @@
+/* ── CoreValuesGrid ─────────────────────────────── */
+
+.cvg-section {
+  position: relative;
+  background-color: var(--bg-page);
+  padding: 6rem 1.5rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Dot grid pattern */
+.cvg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--border-color) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  opacity: 0.55;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Noise/grain texture overlay */
+.cvg-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  opacity: 0.3;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cvg-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Header ─────────────────────────── */
+.cvg-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: cvgFadeUp 0.65s ease both;
+}
+
+.cvg-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+  animation: cvgFadeUp 0.5s ease both;
+}
+
+.cvg-title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin: 0 0 1.25rem;
+  animation: cvgFadeUp 0.6s ease 0.1s both;
+}
+
+.cvg-title-bar {
+  width: 56px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: cvgFadeUp 0.6s ease 0.2s both;
+}
+
+/* ── Grid ─────────────────────────── */
+.cvg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+/* ── Card ─────────────────────────── */
+.cvg-card {
+  position: relative;
+  background: var(--bg-surface);
+  border-radius: 14px;
+  padding: 2rem 1.75rem 2.25rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(12, 45, 94, 0.06), 0 1px 2px rgba(12, 45, 94, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+  animation: cvgFadeUp 0.55s ease calc(var(--delay, 0s) + 0.3s) both;
+}
+
+.cvg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(12, 45, 94, 0.12), 0 4px 8px rgba(12, 45, 94, 0.08);
+}
+
+/* Colored top accent bar */
+.cvg-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  border-radius: 14px 14px 0 0;
+}
+
+/* ── Icon ─────────────────────────── */
+.cvg-icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: var(--primary-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  flex-shrink: 0;
+  color: var(--text-inverse);
+}
+
+.cvg-icon-wrap svg {
+  width: 26px;
+  height: 26px;
+  color: var(--text-inverse);
+}
+
+/* ── Card text ─────────────────────── */
+.cvg-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cvg-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.65rem;
+  line-height: 1.35;
+}
+
+.cvg-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+/* ── Animations ─────────────────────── */
+@keyframes cvgFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Responsive ─────────────────────── */
+@media (max-width: 1023px) {
+  .cvg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 639px) {
+  .cvg-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .cvg-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .cvg-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .cvg-card {
+    padding: 1.75rem 1.5rem 2rem;
+  }
+}

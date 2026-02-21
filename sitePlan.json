@@ -1,0 +1,1166 @@
+{
+  "site": {
+    "branding": {
+      "name": "DriveRate Auto Loans",
+      "tagline": "Your Road to Better Car Financing",
+      "brandNameCore": "DriveRate",
+      "brandNameQualifier": "Auto Loans"
+    },
+    "colorPalettes": [
+      {
+        "name": "Ocean Trust",
+        "colors": {
+          "primary": "#0C2D5E",
+          "secondary": "#1A5276",
+          "background": {
+            "page": "#F7F9FC",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#1A1F2B",
+            "secondary": "#4A5568",
+            "inverse": "#FFFFFF"
+          },
+          "border": "#DFE4EC",
+          "accent": "#0E7C46"
+        }
+      },
+      {
+        "name": "Midnight Luxe",
+        "colors": {
+          "primary": "#141B2D",
+          "secondary": "#1F2B47",
+          "background": {
+            "page": "#F4F5F7",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#141B2D",
+            "secondary": "#556075",
+            "inverse": "#F4F5F7"
+          },
+          "border": "#D6DAE2",
+          "accent": "#B5430E"
+        }
+      },
+      {
+        "name": "Slate Precision",
+        "colors": {
+          "primary": "#2D3748",
+          "secondary": "#4A5568",
+          "background": {
+            "page": "#F9FAFB",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#1A202C",
+            "secondary": "#5A6577",
+            "inverse": "#FFFFFF"
+          },
+          "border": "#E2E5EA",
+          "accent": "#2563EB"
+        }
+      },
+      {
+        "name": "Forest Authority",
+        "colors": {
+          "primary": "#14432A",
+          "secondary": "#1B5E3A",
+          "background": {
+            "page": "#F6F9F7",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#1A2420",
+            "secondary": "#4D6053",
+            "inverse": "#FFFFFF"
+          },
+          "border": "#D4DED8",
+          "accent": "#A6380C"
+        }
+      },
+      {
+        "name": "Crimson Drive",
+        "colors": {
+          "primary": "#7B1A2C",
+          "secondary": "#A02341",
+          "background": {
+            "page": "#FBF7F7",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#231517",
+            "secondary": "#6B4A50",
+            "inverse": "#FFFFFF"
+          },
+          "border": "#E8DBDD",
+          "accent": "#1A6B3C"
+        }
+      },
+      {
+        "name": "Cobalt Velocity",
+        "colors": {
+          "primary": "#1240AB",
+          "secondary": "#1754CC",
+          "background": {
+            "page": "#F5F7FD",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#111827",
+            "secondary": "#4B5563",
+            "inverse": "#FFFFFF"
+          },
+          "border": "#D9DFF0",
+          "accent": "#B94007"
+        }
+      },
+      {
+        "name": "Warm Asphalt",
+        "colors": {
+          "primary": "#3C2415",
+          "secondary": "#5C3A22",
+          "background": {
+            "page": "#FAF8F5",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#2B1D13",
+            "secondary": "#6B5A4E",
+            "inverse": "#FFFFFF"
+          },
+          "border": "#E8E0D6",
+          "accent": "#1B6B8A"
+        }
+      },
+      {
+        "name": "Steel Indigo",
+        "colors": {
+          "primary": "#312E81",
+          "secondary": "#3B389F",
+          "background": {
+            "page": "#F7F7FB",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#1E1B4B",
+            "secondary": "#5B5882",
+            "inverse": "#FFFFFF"
+          },
+          "border": "#DEDDF0",
+          "accent": "#047857"
+        }
+      },
+      {
+        "name": "Charcoal Ember",
+        "colors": {
+          "primary": "#1F1F23",
+          "secondary": "#2E2E34",
+          "background": {
+            "page": "#F5F5F6",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#1F1F23",
+            "secondary": "#5C5C66",
+            "inverse": "#F5F5F6"
+          },
+          "border": "#DDDDE0",
+          "accent": "#C53411"
+        }
+      },
+      {
+        "name": "Teal Momentum",
+        "colors": {
+          "primary": "#0F4C5C",
+          "secondary": "#14697E",
+          "background": {
+            "page": "#F5FAFB",
+            "surface": "#FFFFFF"
+          },
+          "text": {
+            "primary": "#122426",
+            "secondary": "#4B6169",
+            "inverse": "#FFFFFF"
+          },
+          "border": "#D3E3E7",
+          "accent": "#9B2C2C"
+        }
+      }
+    ],
+    "seo": {
+      "defaultTitle": "DriveRate Auto Loans — Better Car Financing Made Simple",
+      "defaultDescription": "DriveRate helps you find competitive car loan options with a simple process, transparent terms, and guidance tailored to your financial goals.",
+      "siteName": "DriveRate Auto Loans"
+    },
+    "navigation": {
+      "items": [
+        {
+          "label": "Home",
+          "url": "/",
+          "type": "link"
+        },
+        {
+          "label": "About",
+          "url": "/about",
+          "type": "link"
+        },
+        {
+          "label": "FAQ",
+          "url": "/faq",
+          "type": "link"
+        },
+        {
+          "label": "Contact",
+          "url": "/contact",
+          "type": "link"
+        },
+        {
+          "label": "Get Started",
+          "url": "/contact",
+          "type": "cta"
+        }
+      ]
+    },
+    "footer": {
+      "branding": {
+        "name": "DriveRate Auto Loans",
+        "description": "Helping drivers secure the right car financing with transparent terms, competitive options, and a streamlined application process."
+      },
+      "links": [
+        {
+          "label": "Home",
+          "url": "/"
+        },
+        {
+          "label": "About Us",
+          "url": "/about"
+        },
+        {
+          "label": "FAQ",
+          "url": "/faq"
+        },
+        {
+          "label": "Contact Us",
+          "url": "/contact"
+        }
+      ],
+      "copyright": "© 2026 DriveRate Auto Loans. All rights reserved."
+    }
+  },
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "DriveRate Auto Loans — Your Road to Better Car Financing",
+        "metaDescription": "Explore competitive car loan options with DriveRate. Transparent terms, fast decisions, and guidance for new and used vehicle financing."
+      },
+      "componentOrder": [
+        "heroSection",
+        "loanTypesOverview",
+        "howItWorksSteps",
+        "whyChooseUs",
+        "customerTestimonials",
+        "readyToApplyCta"
+      ],
+      "componentDefinitions": {
+        "heroSection": {
+          "purpose": "The main hero banner introducing DriveRate's value proposition with a headline, supporting text, and a primary CTA driving users to the contact page.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Bold primary headline (8-14 words) about getting a better car loan"
+              },
+              "subheadline": {
+                "type": "string",
+                "description": "Supporting sentence (15-25 words) expanding on the promise"
+              },
+              "ctaButtonLabel": {
+                "type": "string",
+                "description": "CTA button text, e.g. 'Get Started Today'"
+              },
+              "ctaButtonUrl": {
+                "type": "string",
+                "description": "Must be /contact"
+              },
+              "secondaryCtaLabel": {
+                "type": "string",
+                "description": "Secondary link text, e.g. 'Learn More'"
+              },
+              "secondaryCtaUrl": {
+                "type": "string",
+                "description": "Must be /about"
+              }
+            },
+            "required": [
+              "headline",
+              "subheadline",
+              "ctaButtonLabel",
+              "ctaButtonUrl",
+              "secondaryCtaLabel",
+              "secondaryCtaUrl"
+            ]
+          }
+        },
+        "loanTypesOverview": {
+          "purpose": "Showcases the different car loan types offered (new car, used car, refinancing) so visitors quickly see the breadth of services.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Section heading, e.g. 'Financing Options for Every Driver'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief intro sentence about the range of loan products"
+              },
+              "loanTypes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "iconName": {
+                      "type": "string",
+                      "description": "Icon identifier, e.g. 'newCar', 'usedCar', 'refinance'"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Loan type name, e.g. 'New Car Loans'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentences about this loan type and its benefits"
+                    }
+                  },
+                  "required": [
+                    "iconName",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "loanTypes"
+            ]
+          }
+        },
+        "howItWorksSteps": {
+          "purpose": "Explains the car loan application process in simple numbered steps to reduce anxiety and set expectations.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'How It Works'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief intro about the simple process"
+              },
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "stepNumber": {
+                      "type": "string",
+                      "description": "e.g. '1', '2', '3'"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Step title, e.g. 'Share Your Details'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "1-2 sentence explanation of this step"
+                    }
+                  },
+                  "required": [
+                    "stepNumber",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "steps"
+            ]
+          }
+        },
+        "whyChooseUs": {
+          "purpose": "Highlights key benefits and differentiators of using DriveRate for car financing, building trust and confidence.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Why DriveRate?'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief overview sentence"
+              },
+              "benefits": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "iconName": {
+                      "type": "string",
+                      "description": "Icon identifier, e.g. 'shield', 'clock', 'dollar'"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Benefit name, e.g. 'Transparent Terms'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentences elaborating on this benefit"
+                    }
+                  },
+                  "required": [
+                    "iconName",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "benefits"
+            ]
+          }
+        },
+        "customerTestimonials": {
+          "purpose": "Displays sample customer testimonials to provide social proof and build trust with potential borrowers.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'What Our Customers Say'"
+              },
+              "testimonials": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "quote": {
+                      "type": "string",
+                      "description": "Customer testimonial quote, 2-4 sentences"
+                    },
+                    "customerName": {
+                      "type": "string",
+                      "description": "First name + last initial, e.g. 'Sarah M.'"
+                    },
+                    "context": {
+                      "type": "string",
+                      "description": "Brief context, e.g. 'New Car Buyer' or 'Refinanced Auto Loan'"
+                    }
+                  },
+                  "required": [
+                    "quote",
+                    "customerName",
+                    "context"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "testimonials"
+            ]
+          }
+        },
+        "readyToApplyCta": {
+          "purpose": "A strong call-to-action section at the bottom of the home page encouraging visitors to start their application.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Motivating CTA heading, e.g. 'Ready to Hit the Road?'"
+              },
+              "description": {
+                "type": "string",
+                "description": "1-2 sentences encouraging action"
+              },
+              "ctaButtonLabel": {
+                "type": "string",
+                "description": "Button text, e.g. 'Contact Us Now'"
+              },
+              "ctaButtonUrl": {
+                "type": "string",
+                "description": "Must be /contact"
+              }
+            },
+            "required": [
+              "headline",
+              "description",
+              "ctaButtonLabel",
+              "ctaButtonUrl"
+            ]
+          }
+        }
+      }
+    },
+    "about": {
+      "seo": {
+        "title": "About DriveRate — Our Mission & Approach to Car Lending",
+        "metaDescription": "Learn about DriveRate Auto Loans — our mission to simplify car financing, our values, and how we help drivers secure the right loan."
+      },
+      "componentOrder": [
+        "aboutHero",
+        "ourMission",
+        "coreValuesGrid",
+        "ourApproach",
+        "whoWeServe",
+        "aboutPageCta"
+      ],
+      "componentDefinitions": {
+        "aboutHero": {
+          "purpose": "A hero section introducing the About page with a headline that communicates the company's story and purpose.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "About page hero headline, e.g. 'Driven by Better Financing'"
+              },
+              "subheadline": {
+                "type": "string",
+                "description": "1-2 sentences about what DriveRate stands for"
+              }
+            },
+            "required": [
+              "headline",
+              "subheadline"
+            ]
+          }
+        },
+        "ourMission": {
+          "purpose": "A narrative section explaining the company's mission, why it exists, and what problem it solves for car buyers.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Our Mission'"
+              },
+              "paragraphs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "description": "A paragraph of mission-related content (3-5 sentences)"
+                    }
+                  },
+                  "required": [
+                    "text"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "paragraphs"
+            ]
+          }
+        },
+        "coreValuesGrid": {
+          "purpose": "Displays the company's core values in a grid to communicate culture and commitment to customers.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Our Core Values'"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "iconName": {
+                      "type": "string",
+                      "description": "Icon identifier, e.g. 'integrity', 'transparency'"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Value name, e.g. 'Integrity First'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentence explanation of this value"
+                    }
+                  },
+                  "required": [
+                    "iconName",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "values"
+            ]
+          }
+        },
+        "ourApproach": {
+          "purpose": "Describes DriveRate's approach to car lending — what makes the process different and how they serve customers.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Our Approach to Car Financing'"
+              },
+              "description": {
+                "type": "string",
+                "description": "2-3 sentence overview"
+              },
+              "pillars": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "description": "Pillar name, e.g. 'Personalized Guidance'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentences about this pillar"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "description",
+              "pillars"
+            ]
+          }
+        },
+        "whoWeServe": {
+          "purpose": "Highlights the customer profiles DriveRate helps — first-time buyers, refinancers, etc. — so visitors see themselves represented.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Who We Help'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief intro sentence"
+              },
+              "profiles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "description": "Customer profile, e.g. 'First-Time Car Buyers'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentences about how DriveRate helps this group"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "profiles"
+            ]
+          }
+        },
+        "aboutPageCta": {
+          "purpose": "Bottom CTA encouraging visitors to reach out after learning about the company.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "CTA heading, e.g. 'Let's Find Your Ideal Car Loan'"
+              },
+              "description": {
+                "type": "string",
+                "description": "1-2 motivating sentences"
+              },
+              "ctaButtonLabel": {
+                "type": "string",
+                "description": "Button text"
+              },
+              "ctaButtonUrl": {
+                "type": "string",
+                "description": "Must be /contact"
+              }
+            },
+            "required": [
+              "headline",
+              "description",
+              "ctaButtonLabel",
+              "ctaButtonUrl"
+            ]
+          }
+        }
+      }
+    },
+    "faq": {
+      "seo": {
+        "title": "Car Loan FAQ — Common Questions Answered | DriveRate",
+        "metaDescription": "Find answers to common car loan questions — from interest rates and credit scores to refinancing and loan terms at DriveRate Auto Loans."
+      },
+      "componentOrder": [
+        "faqHero",
+        "generalLoanFaq",
+        "applicationProcessFaq",
+        "refinancingFaq",
+        "creditAndEligibilityFaq",
+        "faqBottomCta"
+      ],
+      "componentDefinitions": {
+        "faqHero": {
+          "purpose": "Introduces the FAQ page with a headline and brief explanation, setting expectations for the questions below.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Page heading, e.g. 'Frequently Asked Questions'"
+              },
+              "subheadline": {
+                "type": "string",
+                "description": "Brief intro about finding answers to car loan questions"
+              }
+            },
+            "required": [
+              "headline",
+              "subheadline"
+            ]
+          }
+        },
+        "generalLoanFaq": {
+          "purpose": "An accordion-style FAQ section covering general car loan questions — what they are, how they work, term lengths, etc.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Category heading, e.g. 'General Car Loan Questions'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "The FAQ question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Detailed answer, 2-5 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "questions"
+            ]
+          }
+        },
+        "applicationProcessFaq": {
+          "purpose": "FAQ section focused on the application process — documents needed, timeline, approval process.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Category heading, e.g. 'Application & Approval'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "The FAQ question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Detailed answer, 2-5 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "questions"
+            ]
+          }
+        },
+        "refinancingFaq": {
+          "purpose": "FAQ section about auto loan refinancing — when to refinance, benefits, and how it works.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Category heading, e.g. 'Refinancing Your Car Loan'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "The FAQ question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Detailed answer, 2-5 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "questions"
+            ]
+          }
+        },
+        "creditAndEligibilityFaq": {
+          "purpose": "FAQ section addressing credit score concerns, eligibility requirements, and options for various credit situations.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Category heading, e.g. 'Credit & Eligibility'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "The FAQ question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Detailed answer, 2-5 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "questions"
+            ]
+          }
+        },
+        "faqBottomCta": {
+          "purpose": "A call-to-action at the bottom of the FAQ page encouraging visitors to contact DriveRate if their question wasn't answered.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "CTA heading, e.g. 'Still Have Questions?'"
+              },
+              "description": {
+                "type": "string",
+                "description": "1-2 sentences inviting visitors to reach out"
+              },
+              "ctaButtonLabel": {
+                "type": "string",
+                "description": "Button text, e.g. 'Contact Our Team'"
+              },
+              "ctaButtonUrl": {
+                "type": "string",
+                "description": "Must be /contact"
+              }
+            },
+            "required": [
+              "headline",
+              "description",
+              "ctaButtonLabel",
+              "ctaButtonUrl"
+            ]
+          }
+        }
+      }
+    },
+    "contact": {
+      "seo": {
+        "title": "Contact DriveRate — Start Your Car Loan Conversation",
+        "metaDescription": "Reach out to DriveRate Auto Loans to discuss your car financing needs. Fill out our contact form and a member of our team will get back to you promptly."
+      },
+      "componentOrder": [
+        "contactHero",
+        "contactForm",
+        "whatToExpect",
+        "contactFaqPreview",
+        "contactClosingCta"
+      ],
+      "componentDefinitions": {
+        "contactHero": {
+          "purpose": "Introduces the contact page with a welcoming headline and brief description of what happens after contacting DriveRate.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Contact page heading, e.g. 'Let's Talk About Your Car Loan'"
+              },
+              "subheadline": {
+                "type": "string",
+                "description": "1-2 sentences about getting in touch and what to expect"
+              }
+            },
+            "required": [
+              "headline",
+              "subheadline"
+            ]
+          }
+        },
+        "contactForm": {
+          "purpose": "The main contact form allowing visitors to submit their name, email, phone, and a message to begin the car loan conversation.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "formTitle": {
+                "type": "string",
+                "description": "Form heading, e.g. 'Send Us a Message'"
+              },
+              "formDescription": {
+                "type": "string",
+                "description": "Brief instruction text above the form"
+              },
+              "fields": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "fieldName": {
+                      "type": "string",
+                      "description": "Field identifier, e.g. 'fullName', 'email', 'phone', 'message'"
+                    },
+                    "label": {
+                      "type": "string",
+                      "description": "Field label displayed to user"
+                    },
+                    "type": {
+                      "type": "string",
+                      "description": "Input type: text, email, tel, textarea"
+                    },
+                    "placeholder": {
+                      "type": "string",
+                      "description": "Placeholder text"
+                    },
+                    "required": {
+                      "type": "boolean",
+                      "description": "Whether field is required"
+                    }
+                  },
+                  "required": [
+                    "fieldName",
+                    "label",
+                    "type",
+                    "placeholder",
+                    "required"
+                  ]
+                }
+              },
+              "submitButtonLabel": {
+                "type": "string",
+                "description": "Submit button text, e.g. 'Send Message'"
+              }
+            },
+            "required": [
+              "formTitle",
+              "formDescription",
+              "fields",
+              "submitButtonLabel"
+            ]
+          }
+        },
+        "whatToExpect": {
+          "purpose": "Explains what happens after a visitor submits the form — sets expectations for response time and next steps.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'What Happens Next?'"
+              },
+              "steps": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "stepNumber": {
+                      "type": "string",
+                      "description": "Step number"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Step title"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "1-2 sentence explanation"
+                    }
+                  },
+                  "required": [
+                    "stepNumber",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "steps"
+            ]
+          }
+        },
+        "contactFaqPreview": {
+          "purpose": "Shows a few common questions on the contact page to potentially answer visitors' questions immediately without waiting for a response.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Quick Answers'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief intro, e.g. 'Before you write, check if your question is answered here'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "Common question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Brief answer, 1-3 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              },
+              "faqLinkLabel": {
+                "type": "string",
+                "description": "Link text to full FAQ, e.g. 'View All FAQ'"
+              },
+              "faqLinkUrl": {
+                "type": "string",
+                "description": "Must be /faq"
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "questions",
+              "faqLinkLabel",
+              "faqLinkUrl"
+            ]
+          }
+        },
+        "contactClosingCta": {
+          "purpose": "A brief closing section reinforcing the invitation to get in touch and linking back to the home page for visitors who want to learn more first.",
+          "dataSchema": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Closing line, e.g. 'We're Here to Help You Drive Away Happy'"
+              },
+              "description": {
+                "type": "string",
+                "description": "1-2 supportive sentences"
+              },
+              "secondaryLinkLabel": {
+                "type": "string",
+                "description": "Link text, e.g. 'Back to Home'"
+              },
+              "secondaryLinkUrl": {
+                "type": "string",
+                "description": "Must be /"
+              }
+            },
+            "required": [
+              "headline",
+              "description",
+              "secondaryLinkLabel",
+              "secondaryLinkUrl"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,218 @@
+/* ── ContactFaqPreview — Accent background, editorial accordion ── */
+
+.cfq-section {
+  position: relative;
+  background: var(--primary-color);
+  overflow: hidden;
+  padding: 6rem 1.5rem;
+  animation: cfq-enter 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Radial spotlight glow */
+.cfq-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 60% at 30% 30%,
+    rgba(26, 82, 118, 0.55) 0%,
+    transparent 70%
+  ),
+  radial-gradient(
+    ellipse 50% 40% at 75% 70%,
+    rgba(14, 124, 70, 0.18) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cfq-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.cfq-header {
+  margin-bottom: 3.5rem;
+}
+
+.cfq-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text-inverse);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+/* Decorative underline accent on the title */
+.cfq-title::after {
+  content: '';
+  display: block;
+  width: 3.5rem;
+  height: 3px;
+  background: var(--accent-color);
+  margin-top: 0.75rem;
+  border-radius: 2px;
+}
+
+.cfq-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  max-width: 600px;
+}
+
+/* ── Accordion ── */
+.cfq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cfq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cfq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 0;
+  text-align: left;
+  color: var(--text-inverse);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: opacity 0.2s ease;
+}
+
+.cfq-question:hover {
+  opacity: 0.85;
+}
+
+.cfq-question-text {
+  flex: 1;
+}
+
+.cfq-icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--text-inverse);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cfq-item--open .cfq-icon {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Answer */
+.cfq-answer-wrap {
+  padding-bottom: 1.5rem;
+}
+
+.cfq-answer {
+  font-size: 0.97rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  padding-left: 0;
+  border-left: 2px solid var(--accent-color);
+  padding-left: 1rem;
+}
+
+/* ── Footer link ── */
+.cfq-footer {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cfq-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-inverse);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid var(--accent-color);
+  transition: gap 0.2s ease, opacity 0.2s ease;
+}
+
+.cfq-link:hover {
+  gap: 0.9rem;
+  opacity: 0.85;
+}
+
+.cfq-link-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.cfq-link:hover .cfq-link-arrow {
+  transform: translateX(4px);
+}
+
+/* ── Entrance animation ── */
+@keyframes cfq-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .cfq-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .cfq-title {
+    font-size: 1.65rem;
+  }
+
+  .cfq-subtitle {
+    font-size: 0.97rem;
+  }
+
+  .cfq-question {
+    font-size: 0.95rem;
+    padding: 1.25rem 0;
+  }
+
+  .cfq-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1.05rem;
+  }
+
+  .cfq-answer {
+    font-size: 0.92rem;
+  }
+}

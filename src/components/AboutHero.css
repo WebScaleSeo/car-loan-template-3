@@ -1,0 +1,284 @@
+/* ==============================
+   AboutHero Component
+   ============================== */
+
+.aboutHero-section {
+  position: relative;
+  background-color: var(--bg-page);
+  overflow: hidden;
+  padding: 7rem 1.5rem 5.5rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Dot pattern ---------- */
+.aboutHero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--border-color) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+  opacity: 0.8;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------- Centre vignette to keep text area clean ---------- */
+.aboutHero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 45%,
+    var(--bg-page) 0%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---------- Noise / grain overlay ---------- */
+.aboutHero-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ---------- Oversized decorative numeral ---------- */
+.aboutHero-deco {
+  position: absolute;
+  top: -0.1em;
+  right: -0.04em;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(180px, 28vw, 380px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--primary-color);
+  opacity: 0.045;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ---------- Inner content ---------- */
+.aboutHero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* ---------- Label pill ---------- */
+.aboutHero-label-wrap {
+  margin-bottom: 1.75rem;
+}
+
+.aboutHero-label {
+  display: inline-block;
+  padding: 0.4rem 1.25rem;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  background: transparent;
+}
+
+/* ---------- Headline ---------- */
+.aboutHero-headline {
+  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem;
+}
+
+/* ---------- Subheadline ---------- */
+.aboutHero-subheadline {
+  font-size: clamp(1rem, 1.8vw, 1.175rem);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 660px;
+  margin: 0 auto 2.75rem;
+}
+
+/* ---------- CTA wrapper ---------- */
+.aboutHero-cta-wrap {
+  margin-bottom: 3.75rem;
+}
+
+/* ---------- CTA button ---------- */
+.aboutHero-cta {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2.75rem;
+  background: var(--primary-color);
+  color: var(--text-inverse);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease;
+  isolation: isolate;
+  animation: ctaPulse 3s ease-in-out infinite;
+}
+
+/* Glow layer behind button */
+.aboutHero-cta::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 12px;
+  background: var(--primary-color);
+  z-index: -1;
+  opacity: 0;
+  filter: blur(10px);
+  animation: ctaGlowLayer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.aboutHero-cta:hover {
+  transform: translateY(-3px) scale(1.04);
+  background: var(--secondary-color);
+  animation: none;
+}
+
+.aboutHero-cta:hover::after {
+  opacity: 0.45;
+  animation: none;
+  filter: blur(14px);
+}
+
+@keyframes ctaPulse {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-2px) scale(1.01); }
+}
+
+@keyframes ctaGlowLayer {
+  0%, 100% { opacity: 0;    filter: blur(10px); }
+  50%       { opacity: 0.28; filter: blur(16px); }
+}
+
+/* ---------- Stat badges ---------- */
+.aboutHero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.aboutHero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border-color);
+  border-radius: 14px;
+  min-width: 155px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.aboutHero-stat:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.aboutHero-stat-value {
+  display: block;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+  line-height: 1;
+}
+
+.aboutHero-stat-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Entrance animations ---------- */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aboutHero-anim-1 {
+  opacity: 0;
+  animation: fadeSlideUp 0.55s ease 0.05s forwards;
+}
+
+.aboutHero-anim-2 {
+  opacity: 0;
+  animation: fadeSlideUp 0.6s ease 0.18s forwards;
+}
+
+.aboutHero-anim-3 {
+  opacity: 0;
+  animation: fadeSlideUp 0.6s ease 0.32s forwards;
+}
+
+.aboutHero-anim-4 {
+  opacity: 0;
+  animation: fadeSlideUp 0.6s ease 0.46s forwards;
+}
+
+.aboutHero-anim-5 {
+  opacity: 0;
+  animation: fadeSlideUp 0.65s ease 0.62s forwards;
+}
+
+/* ---------- Responsive: mobile ---------- */
+@media (max-width: 640px) {
+  .aboutHero-section {
+    padding: 5.5rem 1.25rem 4rem;
+    min-height: 0;
+    align-items: flex-start;
+  }
+
+  .aboutHero-deco {
+    font-size: 45vw;
+    right: -0.05em;
+    top: -0.05em;
+    opacity: 0.035;
+  }
+
+  .aboutHero-headline {
+    letter-spacing: -0.02em;
+  }
+
+  .aboutHero-subheadline {
+    font-size: 0.975rem;
+  }
+
+  .aboutHero-stats {
+    gap: 0.75rem;
+  }
+
+  .aboutHero-stat {
+    padding: 1rem 1.5rem;
+    min-width: 130px;
+    flex: 1 1 130px;
+  }
+}

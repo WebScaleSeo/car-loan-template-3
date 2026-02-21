@@ -1,0 +1,350 @@
+/* =========================================
+   Header Component — DriveRate Auto Loans
+   Ocean Trust palette, energetic + dynamic
+   ========================================= */
+
+/* Base: fixed, full-width, layered */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(
+    135deg,
+    var(--bg-surface) 0%,
+    var(--bg-page) 60%,
+    var(--bg-page) 100%
+  );
+  transition: box-shadow 0.3s ease, background 0.3s ease, padding 0.3s ease;
+  /* Bottom accent stripe offset */
+  padding-bottom: 3px;
+}
+
+/* Subtle decorative background shape */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 3px;
+  background:
+    radial-gradient(ellipse 40% 80% at 5% 50%, rgba(12, 45, 94, 0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 20% 60% at 95% 50%, rgba(14, 124, 70, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Scrolled state — tighter, stronger shadow */
+.header--scrolled {
+  box-shadow:
+    0 2px 8px rgba(12, 45, 94, 0.10),
+    0 6px 24px rgba(12, 45, 94, 0.08);
+  background: linear-gradient(
+    135deg,
+    var(--bg-surface) 0%,
+    var(--bg-page) 100%
+  );
+}
+
+/* ---- Inner layout ---- */
+.header__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: height 0.3s ease;
+}
+
+.header--scrolled .header__inner {
+  height: 62px;
+}
+
+/* ---- Brand lockup ---- */
+.header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+}
+
+.header__brand:hover {
+  opacity: 0.88;
+}
+
+.header__logo-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 2px 6px rgba(12, 45, 94, 0.25));
+  transition: transform 0.2s ease;
+}
+
+.header__brand:hover .header__logo-icon {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.header__brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.header__brand-name {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  line-height: 1.1;
+}
+
+.header__brand-core {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  letter-spacing: -0.02em;
+}
+
+.header__brand-qualifier {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.header__tagline {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 0.68rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-top: 1px;
+}
+
+/* ---- Navigation ---- */
+.header__nav {
+  flex-shrink: 0;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Regular nav links */
+.header__nav-link {
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 6px;
+  position: relative;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.header__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 0.85rem;
+  right: 0.85rem;
+  height: 2px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+}
+
+.header__nav-link:hover {
+  color: var(--primary-color);
+  background: rgba(12, 45, 94, 0.05);
+}
+
+.header__nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* CTA button — "Get Started" */
+.header__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.25rem;
+  margin-left: 0.5rem;
+  background: var(--primary-color);
+  color: var(--text-inverse);
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  letter-spacing: 0.01em;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.22s ease, transform 0.18s ease, box-shadow 0.22s ease;
+  box-shadow: 0 2px 8px rgba(12, 45, 94, 0.30), 0 1px 2px rgba(12, 45, 94, 0.20);
+}
+
+.header__cta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.header__cta-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(12, 45, 94, 0.35), 0 2px 4px rgba(12, 45, 94, 0.25);
+}
+
+.header__cta-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(12, 45, 94, 0.25);
+}
+
+.header__cta-arrow {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.header__cta-btn:hover .header__cta-arrow {
+  transform: translateX(3px);
+}
+
+/* ---- Bottom accent stripe ---- */
+.header__accent-stripe {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 40%,
+    var(--accent-color) 70%,
+    var(--primary-color) 100%
+  );
+  background-size: 200% 100%;
+  animation: stripeShimmer 4s linear infinite;
+}
+
+@keyframes stripeShimmer {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* =========================================
+   RESPONSIVE — Mobile (≤ 768px)
+   ========================================= */
+@media (max-width: 768px) {
+  .header__inner {
+    height: auto;
+    min-height: 60px;
+    flex-wrap: wrap;
+    padding: 0.6rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .header--scrolled .header__inner {
+    height: auto;
+    min-height: 52px;
+  }
+
+  .header__brand {
+    gap: 0.5rem;
+  }
+
+  .header__logo-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header__brand-core {
+    font-size: 1.1rem;
+  }
+
+  .header__brand-qualifier {
+    font-size: 0.7rem;
+  }
+
+  .header__tagline {
+    display: none;
+  }
+
+  .header__nav {
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.5rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .header__nav-list {
+    flex-wrap: wrap;
+    gap: 0.15rem;
+    justify-content: flex-start;
+  }
+
+  .header__nav-link {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .header__cta-btn {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.95rem;
+    margin-left: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__inner {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .header__nav-list {
+    gap: 0.1rem;
+  }
+
+  .header__nav-link {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .header__cta-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    gap: 0.3rem;
+  }
+
+  .header__cta-arrow {
+    width: 11px;
+    height: 11px;
+  }
+}

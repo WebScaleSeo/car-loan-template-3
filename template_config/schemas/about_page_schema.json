@@ -1,0 +1,248 @@
+{
+  "name": "generate_about_page",
+  "description": "Generate complete about page content",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "seo": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 60
+          },
+          "metaDescription": {
+            "type": "string",
+            "minLength": 50,
+            "maxLength": 160
+          }
+        },
+        "required": [
+          "title",
+          "metaDescription"
+        ]
+      },
+      "componentOrder": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "aboutHero",
+            "ourMission",
+            "coreValuesGrid",
+            "ourApproach",
+            "whoWeServe",
+            "aboutPageCta"
+          ]
+        },
+        "minItems": 6,
+        "maxItems": 6
+      },
+      "sections": {
+        "type": "object",
+        "properties": {
+          "aboutHero": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "About page hero headline, e.g. 'Driven by Better Financing'"
+              },
+              "subheadline": {
+                "type": "string",
+                "description": "1-2 sentences about what DriveRate stands for"
+              }
+            },
+            "required": [
+              "headline",
+              "subheadline"
+            ]
+          },
+          "ourMission": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Our Mission'"
+              },
+              "paragraphs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "description": "A paragraph of mission-related content (3-5 sentences)"
+                    }
+                  },
+                  "required": [
+                    "text"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "paragraphs"
+            ]
+          },
+          "coreValuesGrid": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Our Core Values'"
+              },
+              "values": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "iconName": {
+                      "type": "string",
+                      "description": "Icon identifier, e.g. 'integrity', 'transparency'"
+                    },
+                    "title": {
+                      "type": "string",
+                      "description": "Value name, e.g. 'Integrity First'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentence explanation of this value"
+                    }
+                  },
+                  "required": [
+                    "iconName",
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "values"
+            ]
+          },
+          "ourApproach": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Our Approach to Car Financing'"
+              },
+              "description": {
+                "type": "string",
+                "description": "2-3 sentence overview"
+              },
+              "pillars": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "description": "Pillar name, e.g. 'Personalized Guidance'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentences about this pillar"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "description",
+              "pillars"
+            ]
+          },
+          "whoWeServe": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Heading like 'Who We Help'"
+              },
+              "sectionSubtitle": {
+                "type": "string",
+                "description": "Brief intro sentence"
+              },
+              "profiles": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "description": "Customer profile, e.g. 'First-Time Car Buyers'"
+                    },
+                    "description": {
+                      "type": "string",
+                      "description": "2-3 sentences about how DriveRate helps this group"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "description"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "sectionSubtitle",
+              "profiles"
+            ]
+          },
+          "aboutPageCta": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "CTA heading, e.g. 'Let's Find Your Ideal Car Loan'"
+              },
+              "description": {
+                "type": "string",
+                "description": "1-2 motivating sentences"
+              },
+              "ctaButtonLabel": {
+                "type": "string",
+                "description": "Button text"
+              },
+              "ctaButtonUrl": {
+                "type": "string",
+                "description": "Must be /contact"
+              }
+            },
+            "required": [
+              "headline",
+              "description",
+              "ctaButtonLabel",
+              "ctaButtonUrl"
+            ]
+          }
+        },
+        "required": [
+          "aboutHero",
+          "ourMission",
+          "coreValuesGrid",
+          "ourApproach",
+          "whoWeServe",
+          "aboutPageCta"
+        ]
+      }
+    },
+    "required": [
+      "seo",
+      "componentOrder",
+      "sections"
+    ]
+  }
+}

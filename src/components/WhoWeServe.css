@@ -1,0 +1,270 @@
+/* ==============================
+   WhoWeServe — Bold & Disruptive
+   ============================== */
+
+.wws-section {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 1.5rem;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(12, 45, 94, 0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 50% at 90% 100%, rgba(14, 124, 70, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(26, 82, 118, 0.05) 0%, transparent 70%),
+    var(--bg-page);
+}
+
+/* ── Decorative Background Orbs ── */
+.wws-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+.wws-orb-1 {
+  width: 600px;
+  height: 600px;
+  top: -200px;
+  left: -150px;
+  background: radial-gradient(circle, rgba(12, 45, 94, 0.12) 0%, transparent 70%);
+}
+
+.wws-orb-2 {
+  width: 500px;
+  height: 500px;
+  bottom: -150px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(14, 124, 70, 0.1) 0%, transparent 70%);
+}
+
+.wws-orb-3 {
+  width: 400px;
+  height: 400px;
+  top: 40%;
+  right: 20%;
+  background: radial-gradient(circle, rgba(26, 82, 118, 0.07) 0%, transparent 70%);
+}
+
+/* ── Container ── */
+.wws-container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* ── Header ── */
+.wws-header {
+  position: relative;
+  margin-bottom: 5rem;
+  overflow: hidden;
+}
+
+.wws-header-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.wws-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  background: rgba(14, 124, 70, 0.1);
+  border: 1px solid rgba(14, 124, 70, 0.2);
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.wws-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.wws-subtitle {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 620px;
+}
+
+/* Ghost oversized background text */
+.wws-ghost-text {
+  position: absolute;
+  top: -1.5rem;
+  right: -2rem;
+  font-size: clamp(8rem, 18vw, 18rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--primary-color);
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+
+/* ── Profiles Grid ── */
+.wws-profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* ── Card ── */
+.wws-card {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.25rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  box-shadow: 0 2px 16px rgba(12, 45, 94, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* slide-in from left */
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: wws-slide-in 0.6s ease forwards;
+}
+
+.wws-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(12, 45, 94, 0.13);
+}
+
+/* Left border accent strip */
+.wws-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 16px 0 0 16px;
+  background: linear-gradient(
+    180deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 60%,
+    var(--accent-color) 100%
+  );
+}
+
+/* Oversized background number */
+.wws-card-num {
+  position: absolute;
+  top: 0.75rem;
+  right: 1.25rem;
+  font-size: 6rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--primary-color);
+  opacity: 0.06;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.03em;
+}
+
+.wws-card-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.wws-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.875rem 0;
+  line-height: 1.3;
+  padding-right: 3rem;
+}
+
+.wws-card-desc {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  flex: 1;
+}
+
+/* ── Slide-in Animation ── */
+@keyframes wws-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── Responsive: 2 columns at mid ── */
+@media (max-width: 1024px) {
+  .wws-profiles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .wws-ghost-text {
+    font-size: clamp(6rem, 20vw, 12rem);
+  }
+}
+
+/* ── Responsive: 1 column at mobile ── */
+@media (max-width: 640px) {
+  .wws-section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .wws-profiles {
+    grid-template-columns: 1fr;
+  }
+
+  .wws-header {
+    margin-bottom: 3rem;
+    overflow: visible;
+  }
+
+  .wws-ghost-text {
+    position: relative;
+    top: auto;
+    right: auto;
+    font-size: 5rem;
+    text-align: right;
+    margin-top: -1rem;
+    opacity: 0.04;
+  }
+
+  .wws-card {
+    padding: 1.75rem 1.5rem 1.75rem;
+  }
+
+  .wws-card-title {
+    padding-right: 2rem;
+  }
+
+  .wws-card-num {
+    font-size: 4.5rem;
+  }
+
+  .wws-subtitle {
+    font-size: 1rem;
+  }
+}

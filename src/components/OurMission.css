@@ -1,0 +1,230 @@
+/* ===== OurMission Section ===== */
+
+.om-section {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 1.5rem;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 20%, rgba(26, 82, 118, 0.55) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 75%, rgba(14, 124, 70, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse 90% 70% at 50% 50%, rgba(12, 45, 94, 0.9) 0%, transparent 100%),
+    var(--primary-color);
+}
+
+/* ===== Radial Glows ===== */
+.om-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.om-glow--left {
+  width: 500px;
+  height: 500px;
+  top: -120px;
+  left: -150px;
+  background: radial-gradient(circle, rgba(26, 82, 118, 0.5) 0%, transparent 70%);
+  animation: om-pulse 8s ease-in-out infinite alternate;
+}
+
+.om-glow--right {
+  width: 420px;
+  height: 420px;
+  bottom: -100px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(14, 124, 70, 0.3) 0%, transparent 70%);
+  animation: om-pulse 10s ease-in-out infinite alternate-reverse;
+}
+
+/* ===== Geometric Decorations ===== */
+.om-geo {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.om-geo--circle-lg {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  top: -80px;
+  right: 8%;
+}
+
+.om-geo--circle-sm {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  bottom: 10%;
+  left: 6%;
+}
+
+.om-geo--ring {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 2px solid rgba(14, 124, 70, 0.18);
+  top: 30%;
+  right: 4%;
+}
+
+.om-geo--diamond {
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transform: rotate(45deg);
+  bottom: 22%;
+  right: 12%;
+}
+
+/* ===== Inner Container ===== */
+.om-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.om-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  animation: om-fadeUp 0.6s ease both;
+}
+
+.om-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.om-eyebrow-line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.om-eyebrow-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.om-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--text-inverse);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* ===== Cards Grid ===== */
+.om-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ===== Individual Card ===== */
+.om-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+  padding: 2rem 2.25rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  opacity: 0;
+  animation: om-cardIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.om-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Card number badge */
+.om-card-number {
+  flex-shrink: 0;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.15);
+  letter-spacing: -0.03em;
+  min-width: 3rem;
+  padding-top: 0.2rem;
+}
+
+/* Card text */
+.om-card-text {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  line-height: 1.78;
+  color: var(--text-inverse);
+  opacity: 0.9;
+}
+
+/* ===== Keyframes ===== */
+@keyframes om-fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes om-cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes om-pulse {
+  from { opacity: 0.6; transform: scale(1); }
+  to   { opacity: 1;   transform: scale(1.12); }
+}
+
+/* ===== Responsive — Mobile ===== */
+@media (max-width: 640px) {
+  .om-section {
+    padding: 5rem 1.25rem;
+  }
+
+  .om-card {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .om-card-number {
+    font-size: 1.75rem;
+  }
+
+  .om-geo--circle-lg,
+  .om-geo--ring {
+    display: none;
+  }
+}

@@ -1,0 +1,249 @@
+/* ============================================================
+   ContactClosingCta — Light + Gradient, Refined & Understated
+   ============================================================ */
+
+/* ---------- Section shell ---------- */
+.ccc-section {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 1.5rem 6rem;
+
+  /* Multi-stop aurora gradient: pale blues → soft mint → near-white */
+  background:
+    linear-gradient(
+      148deg,
+      rgba(12, 45, 94, 0.08)  0%,
+      rgba(26, 82, 118, 0.06) 25%,
+      rgba(247, 249, 252, 1)  55%,
+      rgba(14, 124, 70, 0.05) 80%,
+      rgba(12, 45, 94, 0.07)  100%
+    ),
+    var(--bg-page);
+
+  /* Diagonal top clip to create a smooth divider from the section above */
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0 100%);
+  margin-top: -2rem;
+}
+
+/* ---------- Background mesh radial glow layers ---------- */
+.ccc-bg-mesh {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 10%,  rgba(26, 82, 118, 0.09) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 85% 80%,  rgba(14, 124, 70, 0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 60% 40%,  rgba(12, 45, 94, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ccc-bg-glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(100px);
+}
+
+.ccc-bg-glow--left {
+  top: -100px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(12, 45, 94, 0.10) 0%, transparent 70%);
+}
+
+.ccc-bg-glow--right {
+  bottom: -80px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(14, 124, 70, 0.09) 0%, transparent 70%);
+}
+
+/* ---------- Inner wrapper ---------- */
+.ccc-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ---------- Eyebrow ornament ---------- */
+.ccc-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+
+  animation: ccc-fadeUp 0.6s ease both;
+  animation-delay: 0.1s;
+}
+
+.ccc-eyebrow-line {
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  opacity: 0.35;
+}
+
+.ccc-eyebrow-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  opacity: 0.45;
+}
+
+/* ---------- Content block ---------- */
+.ccc-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+/* ---------- Headline ---------- */
+.ccc-headline {
+  font-family: var(--font-heading, 'Poppins', sans-serif);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
+  max-width: 680px;
+
+  /* Subtle gradient text for depth on this light bg */
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 60%,
+    var(--accent-color) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  animation: ccc-fadeUp 0.7s ease both;
+  animation-delay: 0.2s;
+}
+
+/* ---------- Description ---------- */
+.ccc-description {
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 620px;
+
+  animation: ccc-fadeUp 0.7s ease both;
+  animation-delay: 0.4s;
+}
+
+/* ---------- Back to Home link ---------- */
+.ccc-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.65rem 1.75rem;
+  border-radius: 100px;
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+  font-family: var(--font-body, 'Poppins', sans-serif);
+  font-size: 0.925rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+
+  animation: ccc-fadeUp 0.7s ease both;
+  animation-delay: 0.6s;
+}
+
+.ccc-back-link:hover {
+  background: var(--primary-color);
+  color: var(--text-inverse);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.ccc-back-arrow {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.ccc-back-link:hover .ccc-back-arrow {
+  transform: translateX(-3px);
+}
+
+/* ---------- Bottom seal decoration ---------- */
+.ccc-seal {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: ccc-fadeIn 0.8s ease both;
+  animation-delay: 0.85s;
+}
+
+.ccc-seal-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid var(--primary-color);
+  opacity: 0.2;
+}
+
+.ccc-seal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  opacity: 0.3;
+}
+
+/* ---------- Animations ---------- */
+@keyframes ccc-fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ccc-fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .ccc-section {
+    padding: 6rem 1.25rem 5rem;
+    clip-path: polygon(0 2.5%, 100% 0%, 100% 100%, 0 100%);
+  }
+
+  .ccc-eyebrow-line {
+    width: 32px;
+  }
+
+  .ccc-back-link {
+    width: 100%;
+    justify-content: center;
+    max-width: 280px;
+  }
+}

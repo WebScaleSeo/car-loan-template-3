@@ -1,0 +1,334 @@
+/* =============================================
+   FaqHero — Dark Gradient Aurora Hero
+   ============================================= */
+
+/* ---------- Entrance Animations ---------- */
+@keyframes faqhero-reveal {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes faqhero-orb-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%       { opacity: 0.55; transform: scale(1.08); }
+}
+
+@keyframes faqhero-dot-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes faqhero-cta-glow {
+  0%, 100% { box-shadow: 0 0 18px 4px rgba(14, 124, 70, 0.45); }
+  50%       { box-shadow: 0 0 32px 8px rgba(14, 124, 70, 0.7); }
+}
+
+/* ---------- Section Shell ---------- */
+.faqhero-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(26, 82, 118, 0.7) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 85% 70%, rgba(14, 124, 70, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 80% at 50% 0%, rgba(12, 45, 94, 0.95) 0%, transparent 80%),
+    linear-gradient(160deg, #0a1e3d 0%, #0C2D5E 40%, #0d3a2e 100%);
+  padding: 6rem 1.5rem 9rem;
+  text-align: center;
+  isolation: isolate;
+}
+
+/* ---------- Noise Texture ---------- */
+.faqhero-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------- Aurora Orbs ---------- */
+.faqhero-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.faqhero-orb--1 {
+  width: 520px;
+  height: 520px;
+  top: -160px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(26, 82, 118, 0.6) 0%, transparent 70%);
+  animation: faqhero-orb-pulse 7s ease-in-out infinite;
+}
+
+.faqhero-orb--2 {
+  width: 400px;
+  height: 400px;
+  bottom: -80px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(14, 124, 70, 0.35) 0%, transparent 70%);
+  animation: faqhero-orb-pulse 9s ease-in-out infinite 2s;
+}
+
+.faqhero-orb--3 {
+  width: 300px;
+  height: 300px;
+  top: 30%;
+  left: 60%;
+  background: radial-gradient(circle, rgba(12, 45, 94, 0.5) 0%, transparent 70%);
+  animation: faqhero-orb-pulse 11s ease-in-out infinite 1s;
+}
+
+/* ---------- Inner Content ---------- */
+.faqhero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* ---------- Label Pill ---------- */
+.faqhero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-inverse);
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.faqhero-label__dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  animation: faqhero-dot-pulse 2.4s ease-in-out infinite;
+}
+
+/* ---------- Headline ---------- */
+.faqhero-headline {
+  font-family: var(--font-heading, sans-serif);
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-inverse);
+  letter-spacing: -0.02em;
+  margin: 0 0 1.5rem;
+  text-wrap: balance;
+}
+
+/* ---------- Subheadline ---------- */
+.faqhero-sub {
+  font-family: var(--font-body, sans-serif);
+  font-size: clamp(1rem, 1.6vw, 1.175rem);
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 680px;
+  margin: 0 0 2.5rem;
+}
+
+/* ---------- CTA Button ---------- */
+.faqhero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--accent-color);
+  color: var(--text-inverse);
+  font-family: var(--font-body, sans-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0.85rem 2.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+  box-shadow: 0 0 18px 4px rgba(14, 124, 70, 0.45);
+  margin-bottom: 3rem;
+  animation: faqhero-cta-glow 3s ease-in-out infinite;
+}
+
+.faqhero-cta:hover {
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 0 40px 12px rgba(14, 124, 70, 0.75);
+  background: #0a9951;
+  animation: none;
+}
+
+.faqhero-cta__icon {
+  transition: transform 0.22s ease;
+  flex-shrink: 0;
+}
+
+.faqhero-cta:hover .faqhero-cta__icon {
+  transform: translateX(4px);
+}
+
+/* ---------- Stat Badges ---------- */
+.faqhero-stats {
+  display: flex;
+  gap: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.faqhero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1.1rem 2.2rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  flex: 1;
+}
+
+.faqhero-stat:last-child {
+  border-right: none;
+}
+
+.faqhero-stat__value {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--text-inverse);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.faqhero-stat__label {
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+/* ---------- Diagonal Divider ---------- */
+.faqhero-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: var(--bg-page);
+  clip-path: polygon(0 60%, 100% 0%, 100% 100%, 0% 100%);
+  z-index: 3;
+}
+
+/* ---------- Entrance Animation Stagger ---------- */
+.faqhero-anim-1 {
+  opacity: 0;
+  animation: faqhero-reveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+.faqhero-anim-2 {
+  opacity: 0;
+  animation: faqhero-reveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+}
+.faqhero-anim-3 {
+  opacity: 0;
+  animation: faqhero-reveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+.faqhero-anim-4 {
+  opacity: 0;
+  animation: faqhero-reveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+}
+.faqhero-anim-5 {
+  opacity: 0;
+  animation: faqhero-reveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .faqhero-section {
+    padding: 4.5rem 1.25rem 7rem;
+  }
+
+  .faqhero-stats {
+    flex-direction: column;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .faqhero-stat {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .faqhero-stat:last-child {
+    border-bottom: none;
+  }
+
+  .faqhero-stat__value {
+    font-size: 1.5rem;
+    min-width: 3rem;
+    text-align: left;
+  }
+
+  .faqhero-stat__label {
+    font-size: 0.75rem;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .faqhero-orb--1 {
+    width: 300px;
+    height: 300px;
+    top: -80px;
+    left: -80px;
+  }
+
+  .faqhero-orb--2 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .faqhero-orb--3 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .faqhero-cta {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}

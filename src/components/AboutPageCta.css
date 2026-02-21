@@ -1,0 +1,252 @@
+/* ===== AboutPageCta ===== */
+
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+}
+
+/* --- Background layers --- */
+.cta-bg-image {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/image4.webp');
+  background-size: cover;
+  background-position: center 40%;
+  z-index: 0;
+}
+
+.cta-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.68);
+  z-index: 1;
+}
+
+/* Aurora gradient: deep navy left → teal-green glow center → transparent right */
+.cta-aurora {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 120% at 20% 50%,
+      rgba(12, 45, 94, 0.82) 0%,
+      rgba(14, 124, 70, 0.28) 55%,
+      transparent 80%),
+    radial-gradient(ellipse 50% 80% at 75% 30%,
+      rgba(26, 82, 118, 0.35) 0%,
+      transparent 65%);
+  z-index: 2;
+}
+
+/* Split color zone — strong navy on left ~55% */
+.cta-zone-left {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(12, 45, 94, 0.55) 0%,
+    rgba(12, 45, 94, 0.30) 50%,
+    transparent 72%
+  );
+  z-index: 3;
+}
+
+/* --- Inner layout --- */
+.cta-inner {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.cta-content-wrap {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Text content — slides in from left --- */
+.cta-content {
+  flex: 1 1 0;
+  min-width: 0;
+  animation: ctaSlideLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes ctaSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cta-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-inverse);
+  opacity: 0.7;
+  margin-bottom: 0.85rem;
+  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+}
+
+.cta-headline {
+  font-size: clamp(1.85rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-inverse);
+  margin: 0 0 1.1rem;
+  max-width: 600px;
+}
+
+.cta-description {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-inverse);
+  opacity: 0.9;
+  max-width: 560px;
+  margin: 0 0 2.25rem;
+}
+
+/* CTA button — white fill with layered box shadows */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--text-inverse);
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.35),
+    0 10px 32px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(255, 255, 255, 0.12) inset;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.cta-button:hover {
+  background: var(--accent-color);
+  color: var(--text-inverse);
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 16px 48px rgba(14, 124, 70, 0.3),
+    0 2px 4px rgba(255, 255, 255, 0.08) inset;
+}
+
+.cta-arrow {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.cta-button:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+/* --- Decorative card — right side --- */
+.cta-deco-card {
+  flex: 0 0 220px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    0 2px 8px rgba(255, 255, 255, 0.06) inset,
+    0 24px 56px rgba(12, 45, 94, 0.3);
+  animation: ctaSlideLeft 0.9s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.cta-deco-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.1rem;
+}
+
+.cta-deco-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cta-deco-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-inverse);
+  margin: 0 0 0.3rem;
+}
+
+.cta-deco-sub {
+  font-size: 0.82rem;
+  color: var(--text-inverse);
+  opacity: 0.65;
+  margin: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .cta-section {
+    min-height: auto;
+  }
+
+  .cta-inner {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .cta-content-wrap {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  .cta-deco-card {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 340px;
+    align-self: center;
+  }
+
+  .cta-zone-left {
+    background: linear-gradient(
+      to bottom,
+      rgba(12, 45, 94, 0.55) 0%,
+      rgba(12, 45, 94, 0.20) 70%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-headline {
+    font-size: 1.65rem;
+  }
+
+  .cta-description {
+    font-size: 0.97rem;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.85rem 1.6rem;
+  }
+}

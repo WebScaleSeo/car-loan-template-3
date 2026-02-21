@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Ocean Trust",
+    "colors": {
+      "primary": "#0C2D5E",
+      "secondary": "#1A5276",
+      "background": {
+        "page": "#F7F9FC",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#1A1F2B",
+        "secondary": "#4A5568",
+        "inverse": "#FFFFFF"
+      },
+      "border": "#DFE4EC",
+      "accent": "#0E7C46"
+    }
+  },
+  {
+    "name": "Midnight Luxe",
+    "colors": {
+      "primary": "#141B2D",
+      "secondary": "#1F2B47",
+      "background": {
+        "page": "#F4F5F7",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#141B2D",
+        "secondary": "#556075",
+        "inverse": "#F4F5F7"
+      },
+      "border": "#D6DAE2",
+      "accent": "#B5430E"
+    }
+  },
+  {
+    "name": "Slate Precision",
+    "colors": {
+      "primary": "#2D3748",
+      "secondary": "#4A5568",
+      "background": {
+        "page": "#F9FAFB",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#1A202C",
+        "secondary": "#5A6577",
+        "inverse": "#FFFFFF"
+      },
+      "border": "#E2E5EA",
+      "accent": "#2563EB"
+    }
+  },
+  {
+    "name": "Forest Authority",
+    "colors": {
+      "primary": "#14432A",
+      "secondary": "#1B5E3A",
+      "background": {
+        "page": "#F6F9F7",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#1A2420",
+        "secondary": "#4D6053",
+        "inverse": "#FFFFFF"
+      },
+      "border": "#D4DED8",
+      "accent": "#A6380C"
+    }
+  },
+  {
+    "name": "Crimson Drive",
+    "colors": {
+      "primary": "#7B1A2C",
+      "secondary": "#A02341",
+      "background": {
+        "page": "#FBF7F7",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#231517",
+        "secondary": "#6B4A50",
+        "inverse": "#FFFFFF"
+      },
+      "border": "#E8DBDD",
+      "accent": "#1A6B3C"
+    }
+  },
+  {
+    "name": "Cobalt Velocity",
+    "colors": {
+      "primary": "#1240AB",
+      "secondary": "#1754CC",
+      "background": {
+        "page": "#F5F7FD",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#111827",
+        "secondary": "#4B5563",
+        "inverse": "#FFFFFF"
+      },
+      "border": "#D9DFF0",
+      "accent": "#B94007"
+    }
+  },
+  {
+    "name": "Warm Asphalt",
+    "colors": {
+      "primary": "#3C2415",
+      "secondary": "#5C3A22",
+      "background": {
+        "page": "#FAF8F5",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#2B1D13",
+        "secondary": "#6B5A4E",
+        "inverse": "#FFFFFF"
+      },
+      "border": "#E8E0D6",
+      "accent": "#1B6B8A"
+    }
+  },
+  {
+    "name": "Steel Indigo",
+    "colors": {
+      "primary": "#312E81",
+      "secondary": "#3B389F",
+      "background": {
+        "page": "#F7F7FB",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#1E1B4B",
+        "secondary": "#5B5882",
+        "inverse": "#FFFFFF"
+      },
+      "border": "#DEDDF0",
+      "accent": "#047857"
+    }
+  },
+  {
+    "name": "Charcoal Ember",
+    "colors": {
+      "primary": "#1F1F23",
+      "secondary": "#2E2E34",
+      "background": {
+        "page": "#F5F5F6",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#1F1F23",
+        "secondary": "#5C5C66",
+        "inverse": "#F5F5F6"
+      },
+      "border": "#DDDDE0",
+      "accent": "#C53411"
+    }
+  },
+  {
+    "name": "Teal Momentum",
+    "colors": {
+      "primary": "#0F4C5C",
+      "secondary": "#14697E",
+      "background": {
+        "page": "#F5FAFB",
+        "surface": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#122426",
+        "secondary": "#4B6169",
+        "inverse": "#FFFFFF"
+      },
+      "border": "#D3E3E7",
+      "accent": "#9B2C2C"
+    }
+  }
+]

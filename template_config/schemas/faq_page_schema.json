@@ -1,0 +1,238 @@
+{
+  "name": "generate_faq_page",
+  "description": "Generate complete faq page content",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "seo": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 60
+          },
+          "metaDescription": {
+            "type": "string",
+            "minLength": 50,
+            "maxLength": 160
+          }
+        },
+        "required": [
+          "title",
+          "metaDescription"
+        ]
+      },
+      "componentOrder": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "faqHero",
+            "generalLoanFaq",
+            "applicationProcessFaq",
+            "refinancingFaq",
+            "creditAndEligibilityFaq",
+            "faqBottomCta"
+          ]
+        },
+        "minItems": 6,
+        "maxItems": 6
+      },
+      "sections": {
+        "type": "object",
+        "properties": {
+          "faqHero": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "Page heading, e.g. 'Frequently Asked Questions'"
+              },
+              "subheadline": {
+                "type": "string",
+                "description": "Brief intro about finding answers to car loan questions"
+              }
+            },
+            "required": [
+              "headline",
+              "subheadline"
+            ]
+          },
+          "generalLoanFaq": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Category heading, e.g. 'General Car Loan Questions'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "The FAQ question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Detailed answer, 2-5 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "questions"
+            ]
+          },
+          "applicationProcessFaq": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Category heading, e.g. 'Application & Approval'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "The FAQ question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Detailed answer, 2-5 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "questions"
+            ]
+          },
+          "refinancingFaq": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Category heading, e.g. 'Refinancing Your Car Loan'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "The FAQ question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Detailed answer, 2-5 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "questions"
+            ]
+          },
+          "creditAndEligibilityFaq": {
+            "type": "object",
+            "properties": {
+              "sectionTitle": {
+                "type": "string",
+                "description": "Category heading, e.g. 'Credit & Eligibility'"
+              },
+              "questions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": "string",
+                      "description": "The FAQ question"
+                    },
+                    "answer": {
+                      "type": "string",
+                      "description": "Detailed answer, 2-5 sentences"
+                    }
+                  },
+                  "required": [
+                    "question",
+                    "answer"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "sectionTitle",
+              "questions"
+            ]
+          },
+          "faqBottomCta": {
+            "type": "object",
+            "properties": {
+              "headline": {
+                "type": "string",
+                "description": "CTA heading, e.g. 'Still Have Questions?'"
+              },
+              "description": {
+                "type": "string",
+                "description": "1-2 sentences inviting visitors to reach out"
+              },
+              "ctaButtonLabel": {
+                "type": "string",
+                "description": "Button text, e.g. 'Contact Our Team'"
+              },
+              "ctaButtonUrl": {
+                "type": "string",
+                "description": "Must be /contact"
+              }
+            },
+            "required": [
+              "headline",
+              "description",
+              "ctaButtonLabel",
+              "ctaButtonUrl"
+            ]
+          }
+        },
+        "required": [
+          "faqHero",
+          "generalLoanFaq",
+          "applicationProcessFaq",
+          "refinancingFaq",
+          "creditAndEligibilityFaq",
+          "faqBottomCta"
+        ]
+      }
+    },
+    "required": [
+      "seo",
+      "componentOrder",
+      "sections"
+    ]
+  }
+}

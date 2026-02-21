@@ -1,0 +1,618 @@
+{
+  "site": {
+    "global": {
+      "branding": {
+        "name": "DriveRate Auto Loans",
+        "tagline": "Your Road to Better Car Financing",
+        "brandNameCore": "DriveRate",
+        "brandNameQualifier": "Auto Loans"
+      },
+      "seo": {
+        "defaultTitle": "DriveRate Auto Loans — Better Car Financing Made Simple",
+        "defaultDescription": "DriveRate helps you find competitive car loan options with a simple process, transparent terms, and guidance tailored to your financial goals.",
+        "siteName": "DriveRate Auto Loans"
+      },
+      "navigation": {
+        "items": [
+          {
+            "label": "Home",
+            "url": "/",
+            "type": "link"
+          },
+          {
+            "label": "About",
+            "url": "/about",
+            "type": "link"
+          },
+          {
+            "label": "FAQ",
+            "url": "/faq",
+            "type": "link"
+          },
+          {
+            "label": "Contact",
+            "url": "/contact",
+            "type": "link"
+          },
+          {
+            "label": "Get Started",
+            "url": "/contact",
+            "type": "cta"
+          }
+        ]
+      },
+      "footer": {
+        "branding": {
+          "name": "DriveRate Auto Loans",
+          "description": "Helping drivers secure the right car financing with transparent terms, competitive options, and a streamlined application process."
+        },
+        "links": [
+          {
+            "label": "Home",
+            "url": "/"
+          },
+          {
+            "label": "About Us",
+            "url": "/about"
+          },
+          {
+            "label": "FAQ",
+            "url": "/faq"
+          },
+          {
+            "label": "Contact Us",
+            "url": "/contact"
+          }
+        ],
+        "copyright": "© 2026 DriveRate Auto Loans. All rights reserved."
+      },
+      "accessibility": {
+        "toggleMobileMenu": "Toggle mobile menu"
+      },
+      "buttons": {
+        "applyNow": "Get Started"
+      },
+      "contact": {
+        "phone": "(555) 000-0000"
+      }
+    },
+    "pages": {
+      "home": {
+        "seo": {
+          "title": "DriveRate Auto Loans — Your Road to Better Car Financing",
+          "metaDescription": "Explore competitive car loan options with DriveRate. Transparent terms, fast decisions, and guidance for new and used vehicle financing."
+        },
+        "componentOrder": [
+          "heroSection",
+          "loanTypesOverview",
+          "howItWorksSteps",
+          "whyChooseUs",
+          "customerTestimonials",
+          "readyToApplyCta"
+        ],
+        "sections": {
+          "heroSection": {
+            "headline": "Drive Away With a Car Loan Built for You",
+            "subheadline": "DriveRate connects you with competitive auto financing options that fit your budget, your credit, and your timeline.",
+            "ctaButtonLabel": "Get My Rate Today",
+            "ctaButtonUrl": "/contact",
+            "secondaryCtaLabel": "Learn How It Works",
+            "secondaryCtaUrl": "/about"
+          },
+          "loanTypesOverview": {
+            "sectionTitle": "Financing Options for Every Driver",
+            "sectionSubtitle": "Whether you're buying new, shopping used, or looking to lower your current rate, DriveRate has a loan solution tailored to your situation.",
+            "loanTypes": [
+              {
+                "iconName": "newCar",
+                "title": "New Car Loans",
+                "description": "Step into the dealership with confidence knowing your financing is already in order. Our new car loan options are designed to get you behind the wheel of the latest models with terms that keep your monthly payments manageable and your interest rate competitive."
+              },
+              {
+                "iconName": "usedCar",
+                "title": "Used Car Loans",
+                "description": "A pre-owned vehicle is a smart investment, and the right financing makes it even smarter. DriveRate offers used car loan options that account for vehicle age and value, so you get a fair rate whether you're buying from a dealer or a private seller."
+              },
+              {
+                "iconName": "refinance",
+                "title": "Auto Loan Refinancing",
+                "description": "If your current auto loan is costing you more than it should, refinancing could lower your interest rate and reduce your monthly payment. DriveRate makes the refinancing process straightforward, helping you replace your existing loan with better terms and real savings."
+              }
+            ]
+          },
+          "howItWorksSteps": {
+            "sectionTitle": "How It Works",
+            "sectionSubtitle": "Getting the right car loan doesn't have to be complicated. Our simple three-step process gets you from application to approval without the stress.",
+            "steps": [
+              {
+                "stepNumber": "1",
+                "title": "Tell Us About Yourself",
+                "description": "Fill out our quick contact form with basic details about your financing needs, the type of vehicle you're looking at, and your preferred loan amount. The whole thing takes just a few minutes."
+              },
+              {
+                "stepNumber": "2",
+                "title": "Review Your Options",
+                "description": "Our team reviews your information and presents you with loan options matched to your credit profile and budget. We walk you through the rates, terms, and monthly payments so you can compare clearly."
+              },
+              {
+                "stepNumber": "3",
+                "title": "Get Approved and Drive",
+                "description": "Once you select the offer that works best for you, we guide you through finalizing the paperwork quickly. Before you know it, you'll have the keys in hand and the open road ahead."
+              }
+            ]
+          },
+          "whyChooseUs": {
+            "sectionTitle": "Why Choose DriveRate?",
+            "sectionSubtitle": "We're committed to making auto financing transparent, accessible, and genuinely stress-free — because you deserve a lender that works for you, not against you.",
+            "benefits": [
+              {
+                "iconName": "shield",
+                "title": "Transparent Terms, No Surprises",
+                "description": "We believe you should fully understand what you're signing before you sign it. DriveRate presents loan offers in plain language with no hidden fees, prepayment penalties, or fine-print gotchas."
+              },
+              {
+                "iconName": "clock",
+                "title": "Fast Decisions, Faster Approvals",
+                "description": "We know that when you're ready to buy, waiting around isn't an option. Our streamlined process is designed to deliver decisions quickly so you can move forward with your purchase without unnecessary delays."
+              },
+              {
+                "iconName": "dollar",
+                "title": "Rates Matched to Your Profile",
+                "description": "Rather than offering one-size-fits-all pricing, we work to match you with loan rates that reflect your actual financial situation. Whether you have excellent credit or are working to rebuild it, we help you find a competitive path forward."
+              },
+              {
+                "iconName": "people",
+                "title": "Real People, Real Support",
+                "description": "You'll never feel like just another application number at DriveRate. Our financing specialists are available to answer your questions, explain your options, and advocate for the best possible outcome on your behalf."
+              },
+              {
+                "iconName": "thumbsUp",
+                "title": "All Credit Situations Considered",
+                "description": "We work with borrowers across a wide range of credit backgrounds, from excellent to fair. If you've faced financial challenges in the past, DriveRate is committed to finding a workable auto loan solution rather than turning you away."
+              },
+              {
+                "iconName": "lock",
+                "title": "Secure and Confidential Process",
+                "description": "Your personal and financial information is handled with the highest level of care. DriveRate uses secure data practices throughout the application process, so you can share what we need with total peace of mind."
+              }
+            ]
+          },
+          "customerTestimonials": {
+            "sectionTitle": "What Our Customers Are Saying",
+            "testimonials": [
+              {
+                "quote": "I was nervous about financing because my credit isn't perfect, but DriveRate made the whole experience easy and judgment-free. They found me a loan I could actually afford and explained every detail before I committed. I drove home in my new car the same week.",
+                "customerName": "Marcus T.",
+                "context": "Used Car Buyer"
+              },
+              {
+                "quote": "I had no idea refinancing my auto loan could make such a difference in my monthly budget. The DriveRate team walked me through the process step by step and made everything crystal clear. I wish I had done it sooner — it's been a total game changer.",
+                "customerName": "Jessica R.",
+                "context": "Auto Loan Refinance"
+              },
+              {
+                "quote": "As a first-time car buyer, I was completely overwhelmed by the financing process. DriveRate broke it all down for me in a way that actually made sense. I felt confident going into the dealership knowing exactly what my budget was and what rate I qualified for.",
+                "customerName": "Daniel K.",
+                "context": "First-Time Car Buyer"
+              },
+              {
+                "quote": "What impressed me most was how honest and upfront the team was about everything. No pressure, no confusing jargon — just straightforward help finding the best loan for my situation. I'll definitely be recommending DriveRate to anyone I know who needs auto financing.",
+                "customerName": "Priya N.",
+                "context": "New Car Loan"
+              }
+            ]
+          },
+          "readyToApplyCta": {
+            "headline": "Ready to Hit the Road? Let's Get You Financed.",
+            "description": "Don't let financing uncertainty slow you down — reach out to the DriveRate team today and take the first step toward a car loan that truly works for your life.",
+            "ctaButtonLabel": "Start My Application",
+            "ctaButtonUrl": "/contact"
+          }
+        }
+      },
+      "about": {
+        "seo": {
+          "title": "About DriveRate — Our Mission & Approach to Car Lending",
+          "metaDescription": "Learn about DriveRate Auto Loans — our mission to simplify car financing, our values, and how we help drivers secure the right loan."
+        },
+        "componentOrder": [
+          "aboutHero",
+          "ourMission",
+          "coreValuesGrid",
+          "ourApproach",
+          "whoWeServe",
+          "aboutPageCta"
+        ],
+        "sections": {
+          "aboutHero": {
+            "headline": "Driven by Better Financing, Built for Real People",
+            "subheadline": "DriveRate Auto Loans exists to make car financing straightforward, fair, and genuinely empowering — because getting behind the wheel of the right vehicle shouldn't mean getting lost in confusing rates, hidden fees, or dead-end applications."
+          },
+          "ourMission": {
+            "sectionTitle": "Our Mission",
+            "paragraphs": [
+              {
+                "text": "At DriveRate Auto Loans, our mission is simple: to put car buyers back in the driver's seat of their own financing decisions. For too long, the auto loan process has been opaque, stressful, and skewed in favor of lenders rather than borrowers. We built DriveRate to change that dynamic — connecting everyday people with competitive loan options that actually reflect their needs and financial situation."
+              },
+              {
+                "text": "We believe that access to fair auto financing shouldn't depend on whether you know the right people or happen to walk into the right dealership on the right day. Whether you're purchasing your first vehicle, upgrading to something that fits a growing family, or looking to refinance a loan that no longer serves you, DriveRate was designed to be the trusted partner you never knew you had in the financing process."
+              },
+              {
+                "text": "Every decision we make — from the tools we build to the lender relationships we cultivate — is guided by one core question: does this genuinely help the car buyer? We measure our success not by volume alone, but by the number of people who drive away with a loan they understand, a payment they can manage, and confidence in the road ahead."
+              }
+            ]
+          },
+          "coreValuesGrid": {
+            "sectionTitle": "Our Core Values",
+            "values": [
+              {
+                "iconName": "transparency",
+                "title": "Radical Transparency",
+                "description": "We believe borrowers deserve to understand exactly what they're signing up for before they commit. Every rate, term, and fee should be clearly explained — no fine print surprises, no last-minute add-ons."
+              },
+              {
+                "iconName": "integrity",
+                "title": "Integrity in Every Interaction",
+                "description": "We only recommend financing paths that are genuinely in the borrower's best interest, even when a different option might be easier for us. Trust is the foundation of everything we do, and we work hard every day to earn it."
+              },
+              {
+                "iconName": "accessibility",
+                "title": "Financing for Everyone",
+                "description": "Good people come with all kinds of credit histories, and we believe everyone deserves a fair shot at reasonable auto financing. We work with a broad range of credit profiles because we know that a number doesn't define a person's potential."
+              },
+              {
+                "iconName": "empowerment",
+                "title": "Borrower Empowerment",
+                "description": "An informed borrower is a confident borrower. We invest in education, guidance, and plain-language communication so that every customer understands their options and feels fully empowered to make their own best decision."
+              },
+              {
+                "iconName": "simplicity",
+                "title": "Simplicity by Design",
+                "description": "Car financing is complex enough without unnecessary friction. We've built our process to be intuitive, efficient, and respectful of your time — from your first rate check to your final signature."
+              },
+              {
+                "iconName": "accountability",
+                "title": "Accountability at Every Step",
+                "description": "We take ownership of the experience we deliver — the good and the areas we're still improving. Our customers trust us with one of the most significant purchases of their lives, and we take that responsibility seriously."
+              }
+            ]
+          },
+          "ourApproach": {
+            "sectionTitle": "Our Approach to Car Financing",
+            "description": "DriveRate isn't just a loan marketplace — we're a financing partner committed to guiding you through every stage of the auto loan journey with clarity and care. Our approach is built on three core pillars that set us apart from traditional dealership financing and one-size-fits-all lenders.",
+            "pillars": [
+              {
+                "title": "Personalized Rate Matching",
+                "description": "We don't believe in generic loan offers. DriveRate evaluates your unique financial profile — including credit history, income, loan term preferences, and vehicle type — to surface options that are genuinely tailored to your situation. The goal is to find you a rate that reflects who you are, not just a number pulled from a standard bracket."
+              },
+              {
+                "title": "Education Before Application",
+                "description": "Before you ever submit an application, we make sure you understand what you're looking at. We walk you through key concepts like APR vs. interest rate, how loan terms affect your total cost, and what to watch out for in a financing agreement. An empowered borrower makes better decisions — and better decisions lead to better outcomes."
+              },
+              {
+                "title": "Streamlined Digital Process",
+                "description": "We've eliminated the paperwork pile-ups and back-and-forth phone tag that make traditional auto financing so exhausting. Our digital-first process lets you check your rate, compare options, and move forward on your terms — from any device, on your schedule. Speed and simplicity aren't features; they're built into the foundation of how DriveRate works."
+              },
+              {
+                "title": "Ongoing Support After Funding",
+                "description": "Our relationship with you doesn't end when your loan is funded. Whether you have questions about your payment schedule, want to explore refinancing down the road, or simply need clarification on your loan terms, DriveRate's support team is here to help long after you drive off the lot."
+              }
+            ]
+          },
+          "whoWeServe": {
+            "sectionTitle": "Who We Help",
+            "sectionSubtitle": "DriveRate was built for real car buyers at every stage of the journey — whether you're applying for your first loan or looking to get a better deal on the one you already have.",
+            "profiles": [
+              {
+                "title": "First-Time Car Buyers",
+                "description": "Navigating your first auto loan can feel overwhelming, especially when you're unsure what a good rate looks like or how much you can realistically afford. DriveRate guides first-time buyers through every step with clear explanations, useful calculators, and financing options designed for those who are just starting to build their credit history."
+              },
+              {
+                "title": "Buyers Looking to Refinance",
+                "description": "If your current auto loan is costing you more than it should — whether because of a high rate at the time of purchase or an improved credit score since then — refinancing could meaningfully reduce your monthly payment and total interest paid. DriveRate makes it easy to explore refinancing options and find out if switching makes financial sense for you."
+              },
+              {
+                "title": "Credit-Challenged Borrowers",
+                "description": "A less-than-perfect credit history doesn't have to mean settling for predatory loan terms or being turned away entirely. DriveRate works with lenders who specialize in credit-challenged profiles, helping borrowers find fair financing options while also offering guidance on how responsible auto loan repayment can support long-term credit rebuilding."
+              },
+              {
+                "title": "Buyers Upgrading or Trading In",
+                "description": "Moving from your current vehicle to something new brings a fresh set of financing considerations, especially when a trade-in is involved. DriveRate helps buyers understand how trade-in equity factors into their new loan, how to avoid common pitfalls during the upgrade process, and how to structure financing that keeps their budget on track."
+              },
+              {
+                "title": "Self-Employed & Non-Traditional Income Earners",
+                "description": "Traditional lenders can make life difficult for freelancers, gig workers, and small business owners whose income doesn't arrive in a standard pay stub format. DriveRate connects these borrowers with lenders experienced in evaluating non-traditional income, so that the way you earn a living doesn't become a barrier to the vehicle you need."
+              }
+            ]
+          },
+          "aboutPageCta": {
+            "headline": "Ready to Find a Car Loan That Works for You?",
+            "description": "Now that you know who we are and how we work, let's put that knowledge into action — reach out today and let a DriveRate specialist help you find auto financing that fits your life and your budget.",
+            "ctaButtonLabel": "Get in Touch Today",
+            "ctaButtonUrl": "/contact"
+          }
+        }
+      },
+      "faq": {
+        "seo": {
+          "title": "Car Loan FAQ — Common Questions Answered | DriveRate",
+          "metaDescription": "Find answers to common car loan questions — from interest rates and credit scores to refinancing and loan terms at DriveRate Auto Loans."
+        },
+        "componentOrder": [
+          "faqHero",
+          "generalLoanFaq",
+          "applicationProcessFaq",
+          "refinancingFaq",
+          "creditAndEligibilityFaq",
+          "faqBottomCta"
+        ],
+        "sections": {
+          "faqHero": {
+            "headline": "Frequently Asked Questions",
+            "subheadline": "Navigating car financing can feel overwhelming — we get it. Browse our most commonly asked questions below to get clear, straightforward answers about car loans, rates, eligibility, and more. Can't find what you're looking for? Our team is ready to help."
+          },
+          "generalLoanFaq": {
+            "sectionTitle": "General Car Loan Questions",
+            "questions": [
+              {
+                "question": "What is a car loan and how does it work?",
+                "answer": "A car loan is a type of installment loan that allows you to borrow money to purchase a vehicle, which you then repay in fixed monthly payments over an agreed-upon term. The vehicle itself typically serves as collateral, meaning the lender holds a lien on the title until the loan is fully paid off. Interest is charged on the outstanding balance, and your rate is determined by factors like your credit score, loan term, and the age of the vehicle."
+              },
+              {
+                "question": "What loan terms are typically available for car loans?",
+                "answer": "Car loan terms commonly range from 24 to 84 months, with 48-, 60-, and 72-month terms being the most popular choices. Shorter terms generally come with higher monthly payments but lower overall interest costs, while longer terms reduce your monthly payment but increase the total interest you pay over the life of the loan. At DriveRate Auto Loans, we help you find a term that balances affordability with long-term financial sense."
+              },
+              {
+                "question": "Can I use a car loan to buy both new and used vehicles?",
+                "answer": "Yes — DriveRate Auto Loans connects you with financing options for both new and used vehicles. Keep in mind that lenders may have different requirements depending on the age and mileage of the vehicle, and interest rates for used car loans can sometimes be slightly higher than those for new vehicles. We work to find you competitive options regardless of which type of vehicle you're purchasing."
+              },
+              {
+                "question": "What is the difference between a dealer loan and a direct auto loan?",
+                "answer": "A dealer loan is arranged through the dealership's financing department, often in partnership with a network of lenders, while a direct auto loan comes from a bank, credit union, or online lender like those accessible through DriveRate. Direct loans give you a pre-approved offer before you step into the dealership, which can strengthen your negotiating position and help you avoid being steered toward less favorable financing. Comparing both options is always a smart move."
+              },
+              {
+                "question": "What does APR mean on a car loan?",
+                "answer": "APR stands for Annual Percentage Rate and represents the true yearly cost of borrowing, including both the interest rate and any applicable fees. It gives you a more complete picture of what a loan will actually cost compared to just looking at the interest rate alone. When comparing loan offers, always use the APR as your primary benchmark to ensure you're making an apples-to-apples comparison."
+              },
+              {
+                "question": "Is a down payment required to get a car loan?",
+                "answer": "A down payment is not always required, but making one is generally beneficial. Putting money down upfront reduces the amount you need to borrow, lowers your monthly payment, and can help you avoid being 'upside down' on your loan — owing more than the car is worth. Many financial advisors suggest aiming for at least ten to twenty percent of the vehicle's purchase price as a down payment when possible."
+              }
+            ]
+          },
+          "applicationProcessFaq": {
+            "sectionTitle": "Application & Approval",
+            "questions": [
+              {
+                "question": "How do I apply for a car loan through DriveRate Auto Loans?",
+                "answer": "Applying is simple and can be completed entirely online in just a few minutes. You'll fill out a secure application form with basic personal, employment, and financial information, and then we'll work to match you with loan offers that fit your profile. Once you receive your offers, you can compare rates and terms before making any commitment — there's no obligation to accept."
+              },
+              {
+                "question": "What documents do I need to complete my car loan application?",
+                "answer": "While requirements can vary by lender, most car loan applications will ask for proof of identity such as a driver's license or passport, proof of income such as recent pay stubs or tax returns, proof of residence such as a utility bill or lease agreement, and details about the vehicle you intend to purchase. Having these documents ready ahead of time can help speed up the approval process significantly."
+              },
+              {
+                "question": "How long does it take to get approved for a car loan?",
+                "answer": "Many applicants receive a decision within minutes of submitting their application online. In some cases, additional verification may be required, which can extend the process to one or two business days. Once approved and all documentation is verified, funds can often be disbursed quickly so you can move forward with your vehicle purchase without unnecessary delays."
+              },
+              {
+                "question": "Will applying for a car loan affect my credit score?",
+                "answer": "Submitting a pre-qualification inquiry typically involves a soft credit pull, which does not impact your credit score. A hard credit inquiry — which can have a minor, temporary effect on your score — generally occurs only when you formally accept a loan offer and proceed with full underwriting. If you're shopping around, multiple hard inquiries for the same type of loan made within a short window are often treated as a single inquiry by major credit bureaus."
+              },
+              {
+                "question": "Can I get pre-approved before choosing a vehicle?",
+                "answer": "Absolutely, and we strongly encourage it. Getting pre-approved through DriveRate Auto Loans before visiting a dealership gives you a clear budget to work with and demonstrates to sellers that you're a serious buyer. It also protects you from dealership financing markups, since you already know what rate you qualify for and can negotiate from a position of strength."
+              },
+              {
+                "question": "What happens if my loan application is denied?",
+                "answer": "If your application isn't approved, you'll typically receive an explanation outlining the reasons, which is required by law under the Equal Credit Opportunity Act. Common reasons include insufficient income, a high debt-to-income ratio, or a low credit score. Use this feedback as a roadmap — paying down existing debt, correcting errors on your credit report, or applying with a co-signer can significantly improve your chances when you reapply."
+              }
+            ]
+          },
+          "refinancingFaq": {
+            "sectionTitle": "Refinancing Your Car Loan",
+            "questions": [
+              {
+                "question": "What does it mean to refinance a car loan?",
+                "answer": "Refinancing means replacing your existing auto loan with a new one — ideally with a lower interest rate, better terms, or both. The new loan pays off your current balance, and you begin making payments under the new agreement. People refinance for many reasons, including to reduce their monthly payment, lower their total interest cost, or adjust the length of their repayment term."
+              },
+              {
+                "question": "When is the right time to refinance my auto loan?",
+                "answer": "A good time to consider refinancing is when interest rates have dropped since you took out your original loan, your credit score has improved, or your financial situation has changed and you need a lower monthly payment. It's generally advisable to wait at least six months into your current loan before refinancing, as this allows you to build a repayment history and potentially qualify for better terms. Avoid refinancing if you're close to paying off your loan, as the savings may not outweigh the costs."
+              },
+              {
+                "question": "How much can I save by refinancing my car loan?",
+                "answer": "The savings from refinancing depend on the difference between your current interest rate and the new rate you qualify for, the remaining balance on your loan, and your new loan term. Even a modest reduction in your interest rate can meaningfully reduce the total amount you pay over the life of the loan. Use our loan calculator to estimate your potential savings before you apply."
+              },
+              {
+                "question": "Does refinancing a car loan hurt my credit score?",
+                "answer": "Like any new credit application, refinancing will trigger a hard inquiry on your credit report, which may cause a small, temporary dip in your score. However, successfully refinancing and making consistent on-time payments on the new loan can contribute positively to your credit profile over time. For most borrowers, the financial benefits of securing a lower rate far outweigh any short-term impact on their credit score."
+              },
+              {
+                "question": "Are there fees involved in refinancing an auto loan?",
+                "answer": "Refinancing fees are generally minimal compared to mortgage refinancing, but there can be costs to be aware of. Some lenders charge origination fees or title transfer fees, and your current lender may have a prepayment penalty for paying off your loan early. Always review the full terms of any new loan offer and calculate your break-even point to ensure refinancing makes financial sense for your situation."
+              },
+              {
+                "question": "Can I refinance a car loan with bad credit?",
+                "answer": "Refinancing with bad credit is more challenging but not impossible. If your credit score has improved since you first took out your loan — even moderately — you may qualify for better terms than you originally received. Alternatively, adding a creditworthy co-signer to the new loan can help you access more favorable rates. Our team can help you explore realistic options based on your current credit profile."
+              }
+            ]
+          },
+          "creditAndEligibilityFaq": {
+            "sectionTitle": "Credit & Eligibility",
+            "questions": [
+              {
+                "question": "What credit score do I need to qualify for a car loan?",
+                "answer": "While there's no universal minimum credit score required, most lenders prefer scores in the fair-to-good range or above for standard loan products. Borrowers with higher credit scores typically qualify for the most competitive interest rates, while those with lower scores may still qualify but can expect higher rates. DriveRate Auto Loans works with a broad network of lenders to help borrowers across a wide range of credit profiles find financing options."
+              },
+              {
+                "question": "Can I get a car loan with bad credit?",
+                "answer": "Yes, financing options are available for borrowers with less-than-perfect credit. Lenders who specialize in bad credit auto loans do exist, though they typically charge higher interest rates to offset their risk. If you're approved with a higher rate, making consistent on-time payments can help rebuild your credit over time — and you can always revisit refinancing once your score improves."
+              },
+              {
+                "question": "Can I apply for a car loan with no credit history?",
+                "answer": "Having no credit history — sometimes called being 'credit invisible' — presents a unique challenge, but it doesn't automatically disqualify you from getting a car loan. Some lenders specialize in first-time borrowers, and applying with a co-signer who has an established credit history can significantly improve your approval odds and the rates you're offered. Making a larger down payment can also help demonstrate financial responsibility to lenders."
+              },
+              {
+                "question": "What is a debt-to-income ratio and why does it matter?",
+                "answer": "Your debt-to-income ratio, or DTI, is the percentage of your gross monthly income that goes toward paying existing debts, including your potential new car loan payment. Lenders use this figure to assess your ability to take on and repay additional debt. Most lenders prefer a DTI below a certain threshold, and keeping your ratio low by paying down existing obligations can improve your eligibility and the terms you're offered."
+              },
+              {
+                "question": "What is a co-signer and should I use one?",
+                "answer": "A co-signer is someone — typically a trusted family member or close friend — who agrees to share legal responsibility for your loan and whose credit history is also considered in the approval process. Using a co-signer with strong credit can help you qualify for a loan you might not get on your own, or secure a lower interest rate. However, it's important to understand that if you miss payments, it will negatively impact the co-signer's credit as well."
+              },
+              {
+                "question": "Do I need to be employed to qualify for a car loan?",
+                "answer": "Lenders generally require proof of a stable, sufficient income to ensure you can manage loan repayments, but that income doesn't always have to come from traditional employment. Self-employment income, retirement benefits, disability payments, and other verifiable income sources may also be considered. You'll typically need to provide documentation to verify your income, regardless of its source."
+              }
+            ]
+          },
+          "faqBottomCta": {
+            "headline": "Still Have Questions? We're Here to Help.",
+            "description": "If you didn't find the answer you were looking for, our car financing specialists are just a message away — reach out and we'll get back to you promptly with personalized guidance.",
+            "ctaButtonLabel": "Contact Our Team",
+            "ctaButtonUrl": "/contact"
+          }
+        }
+      },
+      "contact": {
+        "seo": {
+          "title": "Contact DriveRate — Start Your Car Loan Conversation",
+          "metaDescription": "Reach out to DriveRate Auto Loans to discuss your car financing needs. Fill out our contact form and a member of our team will get back to you promptly."
+        },
+        "componentOrder": [
+          "contactHero",
+          "contactForm",
+          "whatToExpect",
+          "contactFaqPreview",
+          "contactClosingCta"
+        ],
+        "sections": {
+          "contactHero": {
+            "headline": "Let's Talk About Your Next Car Loan",
+            "subheadline": "Whether you're buying your first vehicle, refinancing an existing loan, or simply exploring your options, our team at DriveRate Auto Loans is ready to guide you every step of the way. Reach out today and expect a friendly, knowledgeable response within one business day."
+          },
+          "contactForm": {
+            "formTitle": "Send Us a Message",
+            "formDescription": "Fill out the form below and a DriveRate financing specialist will be in touch to discuss your car loan needs. All fields marked with an asterisk are required.",
+            "fields": [
+              {
+                "fieldName": "fullName",
+                "label": "Full Name *",
+                "type": "text",
+                "placeholder": "e.g. Jane Smith",
+                "required": true
+              },
+              {
+                "fieldName": "email",
+                "label": "Email Address *",
+                "type": "email",
+                "placeholder": "e.g. jane@example.com",
+                "required": true
+              },
+              {
+                "fieldName": "phone",
+                "label": "Phone Number",
+                "type": "tel",
+                "placeholder": "e.g. (555) 000-0000",
+                "required": false
+              },
+              {
+                "fieldName": "loanPurpose",
+                "label": "Loan Purpose *",
+                "type": "text",
+                "placeholder": "e.g. New car purchase, refinance, used vehicle",
+                "required": true
+              },
+              {
+                "fieldName": "message",
+                "label": "Your Message *",
+                "type": "textarea",
+                "placeholder": "Tell us a little about your situation — the type of vehicle you're considering, your current loan if refinancing, or any questions you have about the financing process.",
+                "required": true
+              }
+            ],
+            "submitButtonLabel": "Send My Message"
+          },
+          "whatToExpect": {
+            "sectionTitle": "What Happens After You Submit?",
+            "steps": [
+              {
+                "stepNumber": "1",
+                "title": "We Review Your Inquiry",
+                "description": "A DriveRate financing specialist carefully reviews your message to understand your situation and identify the best loan options for your needs. We treat every inquiry with the attention it deserves — no automated, copy-paste responses."
+              },
+              {
+                "stepNumber": "2",
+                "title": "You Hear Back Within One Business Day",
+                "description": "Expect a personalized reply from our team by the next business day, often sooner. We'll reach out via your preferred contact method — email or phone — whichever you provided."
+              },
+              {
+                "stepNumber": "3",
+                "title": "We Walk You Through Your Options",
+                "description": "Our specialist will explain the loan products, rates, and terms that align with your credit profile and budget. There's no pressure — just clear, honest guidance so you can make a confident decision."
+              },
+              {
+                "stepNumber": "4",
+                "title": "You Apply When You're Ready",
+                "description": "When you're comfortable moving forward, we'll help you complete a simple application and keep the process moving as efficiently as possible — so you can get behind the wheel sooner."
+              }
+            ]
+          },
+          "contactFaqPreview": {
+            "sectionTitle": "Quick Answers Before You Write",
+            "sectionSubtitle": "You might find exactly what you're looking for right here — check these common questions before reaching out.",
+            "questions": [
+              {
+                "question": "What credit score do I need to qualify for a car loan?",
+                "answer": "DriveRate works with a wide range of credit profiles, from excellent to less-than-perfect credit. Our team will assess your full financial picture and match you with lenders best suited to your situation."
+              },
+              {
+                "question": "Can I refinance my current auto loan through DriveRate?",
+                "answer": "Yes — refinancing is one of our most popular services. If your current rate feels too high or your financial situation has improved since you took out your loan, refinancing could lower your monthly payment and overall interest costs. Contact us and we'll evaluate your options."
+              },
+              {
+                "question": "How long does the car loan approval process take?",
+                "answer": "The process varies depending on your lender and documentation, but many of our clients receive decisions quickly after completing their application. Our team works to keep things moving so there are no unnecessary delays."
+              },
+              {
+                "question": "Is there a fee to get a car loan quote through DriveRate?",
+                "answer": "No. Getting in touch and exploring your loan options through DriveRate is completely free. You'll never be charged just for asking questions or reviewing offers."
+              },
+              {
+                "question": "Do you offer financing for both new and used vehicles?",
+                "answer": "Absolutely. DriveRate connects borrowers with financing options for new cars, used vehicles, and private-party purchases. Whatever you're driving toward, we can help you get there."
+              }
+            ],
+            "faqLinkLabel": "View All Frequently Asked Questions",
+            "faqLinkUrl": "/faq"
+          },
+          "contactClosingCta": {
+            "headline": "We're Here to Help You Drive Away Happy",
+            "description": "At DriveRate Auto Loans, every conversation starts with listening — because the right car loan begins with understanding your goals, not pushing a product. Reach out today and take the first confident step toward smarter auto financing.",
+            "secondaryLinkLabel": "Back to Home",
+            "secondaryLinkUrl": "/"
+          }
+        }
+      }
+    },
+    "theme": {
+      "current": "theme1"
+    }
+  },
+  "image4_keywords": [
+    "company culture",
+    "professional team",
+    "modern office space"
+  ],
+  "image5_keywords": [
+    "professional photography",
+    "business visual",
+    "modern design element"
+  ],
+  "image3_keywords": [
+    "real estate photography",
+    "property interior",
+    "luxury home"
+  ]
+}

@@ -1,0 +1,308 @@
+/* ===== ReadyToApplyCta ===== */
+
+.rtac-section {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 5rem 1.5rem;
+}
+
+/* Background image — highway at dusk, desaturated */
+.rtac-bg-image {
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/image3.webp');
+  background-size: cover;
+  background-position: center 40%;
+  filter: grayscale(40%) brightness(0.6);
+  transform: scale(1.04);
+}
+
+/* Aurora mesh gradient overlay */
+.rtac-aurora {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 20%, var(--primary-color), transparent 65%),
+    radial-gradient(ellipse 60% 50% at 85% 75%, var(--secondary-color), transparent 60%),
+    radial-gradient(ellipse 55% 55% at 60% 10%, var(--accent-color), transparent 55%);
+  opacity: 0.55;
+  mix-blend-mode: color;
+}
+
+/* Dark scrim for readability */
+.rtac-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(12, 45, 94, 0.78) 0%,
+    rgba(10, 30, 55, 0.70) 40%,
+    rgba(14, 124, 70, 0.25) 100%
+  );
+}
+
+/* Content wrapper */
+.rtac-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+  animation: rtac-fade-in 0.8s ease both;
+}
+
+/* ===== Stats row ===== */
+.rtac-stats-row {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.rtac-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 1.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.rtac-stat:last-child {
+  border-right: none;
+}
+
+.rtac-stat-number {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: var(--text-inverse);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.rtac-stat-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.72);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ===== Glassmorphism card ===== */
+.rtac-card {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 8px 48px rgba(12, 45, 94, 0.4),
+    0 2px 12px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+
+/* Subtle warm glow inside card */
+.rtac-card-glow {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 200px;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.07), transparent 70%);
+  pointer-events: none;
+}
+
+.rtac-card-body {
+  padding: 3.5rem 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* ===== Badge ===== */
+.rtac-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rtac-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 6px var(--accent-color);
+  animation: rtac-pulse 2s ease-in-out infinite;
+}
+
+/* ===== Headline ===== */
+.rtac-headline {
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-inverse);
+  letter-spacing: -0.02em;
+  margin: 0;
+  max-width: 640px;
+}
+
+/* ===== Description ===== */
+.rtac-description {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  max-width: 580px;
+}
+
+/* ===== CTA Button ===== */
+.rtac-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--accent-color);
+  color: var(--text-inverse);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.9rem 2.2rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 4px 20px rgba(14, 124, 70, 0.45);
+  letter-spacing: 0.01em;
+}
+
+.rtac-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(14, 124, 70, 0.55);
+  background: var(--secondary-color);
+}
+
+.rtac-cta-btn:active {
+  transform: translateY(0);
+}
+
+.rtac-btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.rtac-cta-btn:hover .rtac-btn-icon {
+  transform: translateX(3px);
+}
+
+/* ===== Reassurance text ===== */
+.rtac-reassurance {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+/* ===== Animations ===== */
+@keyframes rtac-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rtac-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .rtac-section {
+    padding: 4rem 1.25rem;
+    min-height: auto;
+  }
+
+  .rtac-stats-row {
+    gap: 0;
+    max-width: 100%;
+  }
+
+  .rtac-stat {
+    padding: 0 0.75rem;
+  }
+
+  .rtac-stat-number {
+    font-size: 2rem;
+  }
+
+  .rtac-card-body {
+    padding: 2.25rem 1.75rem 2rem;
+  }
+
+  .rtac-headline {
+    font-size: 1.55rem;
+  }
+
+  .rtac-description {
+    font-size: 0.95rem;
+  }
+
+  .rtac-cta-btn {
+    font-size: 0.95rem;
+    padding: 0.85rem 1.75rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .rtac-stats-row {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  .rtac-stat {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0 0 1.25rem;
+    width: 100%;
+  }
+
+  .rtac-stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .rtac-card-body {
+    padding: 2rem 1.25rem 1.75rem;
+  }
+}
